@@ -4,7 +4,6 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { Outlet } from 'react-router-dom';
 import { ErrorFallback } from 'src/components/ErrorFallback';
 import { useScroll } from 'src/hooks/useScroll';
-import { MobileContainer } from './components/MobileContainer';
 
 function App() {
   const theme = useTheme();
@@ -20,9 +19,10 @@ function App() {
           },
         }}
       />
-      <MobileContainer>
+      {/* <MobileContainer>
         <Outlet />
-      </MobileContainer>
+      </MobileContainer> */}
+      <Outlet />
     </ErrorBoundary>
   );
 }
