@@ -1,0 +1,55 @@
+Strona główna:
+klienci
+https://www.youtube.com/watch?v=usoJ6ckzUz8
+błąd wysyłania - coś poszło nie tak, spróbuj za chwilę lub napisz do mnie bezpośrednio na {{email}}
+
+naglowek zgodnie ze zdjeciami
+portfolio/oferta nie rozwijane
+
+strona glowa
+1. zdjecia tak jak u Darii
+2. przywitanie tak jak u https://fotokulinarna.pl/
+3. oferta jak u Darii
+4. kontakt
+5. stopka
+
+przyciski bez ikonek, outlined, border radius 20
+zarezerwuj sesję na każdej podstronie
+więcej o mnie
+stopka logo, kontakty i linki
+przycisk powrót na górę
+
+osobno zdjęcia na telefon i komputer
+opacity na 0.5
+
+
+3 zdjęcia migające u samej góry opcja przełączania zdjęć (kropeczki) 
+
+
+zobacz opinie
+rozwijają się opinie pod spodem
+
+Oferta:
+nagłowek znikający
+napis oferta na środku
+zdjęcie przymglone
+narazie brak dowiedz się więcej
+
+pod spodem
+tytuł jak o mnie
+krótki tekst
+2 kafelki z powiększanym zdjęciem
+pod spodem tekst zobacz też + pod spodem 
+
+oferta produktowa/kulinarna:
+opis że zajmuej sie fotografią, do czego to jest itp
+dlaczego warto w punktach jak na h
+
+dla kogo warto w punktach 
+tak może wyglądać Twój produkt + zdjęcia pod spodem
+
+wyceń sesję jak na packshothouse: 
+https://packshothouse.pl/fotografia-reklamowa/?utm_term=fotografia%20produktowa&utm_campaign=CA%C5%81A+POLSKA++-+Packshot/Fotografia+produktowa&utm_source=adwords&utm_medium=ppc&hsa_acc=5282509315&hsa_cam=19738659777&hsa_grp=152121367648&hsa_ad=735397906987&hsa_src=g&hsa_tgt=kwd-14309033645&hsa_kw=fotografia%20produktowa&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=19738659777&gbraid=0AAAAApXzymt3GsYEcnAXRGC4_hkvum0oU&gclid=CjwKCAjwuIbBBhBvEiwAsNypvWyw2ipSCRwKKxe2DWCav8AD2zATU7PjIGnbP3YXcKpffZm9VnR99hoCG30QAvD_BwE
+
+https://stackoverflow.com/questions/36011605/javascript-upload-image-file-and-resize-to-different-resolution-then-download
+https://stackoverflow.com/questions/23945494/use-html5-to-resize-an-image-before-upload

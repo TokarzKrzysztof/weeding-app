@@ -1,0 +1,76 @@
+{
+  "name": "frontend-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@dnd-kit/core": "^6.1.0",
+    "@dnd-kit/sortable": "^8.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@emailjs/browser": "^4.4.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.1",
+    "@mui/material": "^5.14.20",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.39",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "axios": "^1.5.0",
+    "env-cmd": "^10.1.0",
+    "generate-react-cli": "^8.4.1",
+    "jotai": "^2.4.3",
+    "localforage": "^1.10.0",
+    "lodash": "^4.17.21",
+    "match-sorter": "^6.3.1",
+    "notistack": "^3.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.13",
+    "react-hook-form": "^7.45.4",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^6.26.1",
+    "react-scripts": "5.0.1",
+    "react-type-animation": "^3.2.0",
+    "react-visibility-sensor": "^5.1.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4",
+    "yet-another-react-lightbox": "^3.17.0"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired --max_old_space_size=1000 build",
+    "build:dev": "env-cmd -f .env.dev react-app-rewired --max_old_space_size=1000 build",
+    "build:prod": "env-cmd -f .env.prod react-app-rewired --max_old_space_size=1000 build",
+    "test": "react-app-rewired test --transformIgnorePatterns 'node_modules/(?!axios)/' --resetMocks false",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**",
+    "lint:fix": "eslint --fix src/**"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.0.1",
+    "@types/lodash": "^4.14.199",
+    "@types/react-show-more-text": "^1.4.5",
+    "react-app-rewired": "^2.2.1"
+  }
+}
