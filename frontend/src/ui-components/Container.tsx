@@ -1,7 +1,7 @@
 import {
-  ContainerProps as MuiContainerProps,
   ContainerTypeMap,
-  default as MuiContainer
+  default as MuiContainer,
+  ContainerProps as MuiContainerProps
 } from '@mui/material/Container';
 import { ForwardedRef } from 'react';
 import { typedForwardRef } from 'src/utils/types/forward-ref';
@@ -16,7 +16,8 @@ const ContainerInner = <D extends React.ElementType = ContainerTypeMap['defaultC
   <MuiContainer
     ref={ref}
     sx={{
-      py: 6,
+      pb: 6,
+      pt: 2,
       ...sx,
     }}
     {...props}

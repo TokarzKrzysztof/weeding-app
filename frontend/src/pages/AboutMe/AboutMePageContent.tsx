@@ -1,6 +1,7 @@
 import { SxProps, Theme, useTheme } from '@mui/material';
 import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import { ImagePath } from 'src/_generated';
 import { Img } from 'src/components/Img';
 import { useDeviceMediaQuery } from 'src/hooks/useDeviceMediaQuery';
 import { AppRoutes } from 'src/router/app-routes';
@@ -11,10 +12,9 @@ import {
   Container,
   largeTextFontSize,
   Stack,
-  Typography
+  Typography,
 } from 'src/ui-components';
 import { Links } from 'src/utils/constants';
-import { ImagePath } from 'src/_generated';
 
 export const AboutMePageContent = () => {
   const { isDesktop } = useDeviceMediaQuery();
@@ -184,7 +184,7 @@ export const AboutMePageContent = () => {
   );
 };
 
-const ImagesSet = ({ images }: { images: ImagePath[] }) => {
+export const ImagesSet = ({ images }: { images: ImagePath[] }) => {
   const { isDesktop } = useDeviceMediaQuery();
 
   const shadowSize = isDesktop ? 'normal' : 'small';
@@ -197,20 +197,24 @@ const ImagesSet = ({ images }: { images: ImagePath[] }) => {
         aspectRatio='1/1.3'
         rotate={10}
       />
-      <ImageCard
-        img={images[1]}
-        shadowSize={shadowSize}
-        sx={{ flex: 1 }}
-        aspectRatio='1/1.3'
-        rotate={-3}
-      />
-      <ImageCard
-        img={images[2]}
-        shadowSize={shadowSize}
-        sx={{ flex: 1 }}
-        aspectRatio='1/1.3'
-        rotate={10}
-      />
+      {images[1] && (
+        <ImageCard
+          img={images[1]}
+          shadowSize={shadowSize}
+          sx={{ flex: 1 }}
+          aspectRatio='1/1.3'
+          rotate={-3}
+        />
+      )}
+      {images[2] && (
+        <ImageCard
+          img={images[2]}
+          shadowSize={shadowSize}
+          sx={{ flex: 1 }}
+          aspectRatio='1/1.3'
+          rotate={10}
+        />
+      )}
       {images[3] && (
         <ImageCard
           img={images[3]}
