@@ -189,7 +189,7 @@ export const ImagesSet = ({ images }: { images: ImagePath[] }) => {
 
   const shadowSize = isDesktop ? 'normal' : 'small';
   return (
-    <>
+    <Stack>
       <ImageCard
         img={images[0]}
         shadowSize={shadowSize}
@@ -224,7 +224,7 @@ export const ImagesSet = ({ images }: { images: ImagePath[] }) => {
           rotate={-3}
         />
       )}
-    </>
+    </Stack>
   );
 };
 
