@@ -1,10 +1,10 @@
+import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CloseIcon from '@mui/icons-material/Close';
-import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
+import FlightIcon from '@mui/icons-material/Flight';
 import { Collapse, useTheme } from '@mui/material';
 import { TransitionProps } from '@mui/material/transitions';
 import React, { useState } from 'react';
-import { useDocumentTitle } from 'src/hooks/useDocumentTitle';
 import { ImagesSet } from 'src/pages/AboutMe/AboutMePageContent';
 import {
   Box,
@@ -32,7 +32,6 @@ export const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAthens, setIsAthens] = useState(false);
 
-  useDocumentTitle(null);
   return (
     <>
       <Container sx={{ textAlign: 'center' }}>
@@ -73,7 +72,7 @@ export const Home = () => {
             onClick={() => setIsAthens(true)}
           >
             <Stack
-              sx={{
+             sx={{
                 alignItems: 'center',
                 borderBottom: '1px solid lightgrey',
                 justifyContent: 'space-between',
@@ -90,7 +89,8 @@ export const Home = () => {
               </Stack>
               <IconButton sx={{ p: 0 }}>
                 {/* <ArrowRightAltIcon fontSize='large' /> */}
-                <QuestionMarkIcon fontSize='large' />
+                {/* <QuestionMarkIcon fontSize='large' /> */}
+                <FlightIcon sx={{ transform: 'rotate(90deg)' }} />
               </IconButton>
             </Stack>
             <Stack
@@ -110,7 +110,7 @@ export const Home = () => {
                 <Typography sx={{ ml: 2, fontSize: 20 }}>Rodos</Typography>
               </Stack>
               <IconButton sx={{ p: 0 }}>
-                <ArrowRightAltIcon fontSize='large' />
+                <ArrowCircleRightOutlinedIcon />
               </IconButton>
             </Stack>
             <Stack sx={{ alignItems: 'center', justifyContent: 'space-between', p: 2 }}>
@@ -154,7 +154,7 @@ export const Home = () => {
         onClose={() => setIsAthens(false)}
       >
         <Stack
-          sx={{ p: 1, pl: 2, background: theme.palette.grey[100], justifyContent: 'space-between' }}
+          sx={{ p: 1, pl: 2, background: '#fff1f7', justifyContent: 'space-between' }}
         >
           <Stack sx={{ alignItems: 'center' }}>
             <img
