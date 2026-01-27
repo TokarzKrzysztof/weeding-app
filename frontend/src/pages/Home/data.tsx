@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { ImagePath } from 'src/_generated';
 import { Typography } from 'src/ui-components';
 
-export type Trip = {
+export type Place = {
   label: string;
   imgSrc: ImagePath;
   dialogContent: ReactNode;
@@ -11,14 +11,14 @@ export type Trip = {
 export type Country = {
   label: string;
   flagSrc: ImagePath;
-  trips: Trip[];
+  places: Place[];
 };
 
 export const data: Country[] = [
   {
     label: 'Grecja',
     flagSrc: 'flagi/grecja.png',
-    trips: [
+    places: [
       {
         label: 'Ateny',
         imgSrc: 'ateny.png' as any,
@@ -69,7 +69,7 @@ export const data: Country[] = [
   {
     label: 'Japonia',
     flagSrc: 'flagi/japonia.png',
-    trips: [
+    places: [
       {
         label: 'Tokio',
         imgSrc: 'santorini.png' as any,
@@ -80,7 +80,7 @@ export const data: Country[] = [
   {
     label: 'Polska',
     flagSrc: 'flagi/polska.png',
-    trips: [
+    places: [
       {
         label: 'Toruń',
         imgSrc: 'santorini.png' as any,
@@ -93,4 +93,44 @@ export const data: Country[] = [
       },
     ],
   },
+  {
+    label: 'Korea',
+    flagSrc: 'flagi/korea.png',
+    places: [],
+  },
+  {
+    label: 'Czechy',
+    flagSrc: 'flagi/czechy.png',
+    places: [],
+  },
+  {
+    label: 'Turcja',
+    flagSrc: 'flagi/turcja.png',
+    places: [],
+  },
+  {
+    label: 'Tajlandia',
+    flagSrc: 'flagi/tajlandia.png',
+    places: [],
+  },
+  {
+    label: 'Włochy',
+    flagSrc: 'flagi/wlochy.png',
+    places: [],
+  },
+  {
+    label: 'Dania',
+    flagSrc: 'flagi/dania.png',
+    places: [],
+  },
 ];
+
+//  new Image("grecja.png"),
+//  new Image("japonia.png"),
+//  new Image("polska.png"),
+//  new Image("korea.png"),
+//  new Image("czechy.png"),
+//  new Image("turcja.png"),
+//  new Image("tajlandia.png"),
+//  new Image("wlochy.png"),
+//  new Image("dania.png"),

@@ -43,7 +43,7 @@ export const CountryItem = ({ data }: CountryItemProps) => {
             borderRadius: 3,
           }}
         >
-          {data.trips.map((x) => (
+          {data.places.map((x) => (
             <TripItem data={x} key={x.label} />
           ))}
         </Box>

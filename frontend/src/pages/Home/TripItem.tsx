@@ -2,7 +2,7 @@ import FlightIcon from '@mui/icons-material/Flight';
 import { TransitionProps } from '@mui/material/transitions';
 import React, { useState } from 'react';
 import { FullscreenDialog } from 'src/pages/Home/FullscreenDialog';
-import { Trip } from 'src/pages/Home/data';
+import { Place } from 'src/pages/Home/data';
 import { buildImgSrc, IconButton, Slide, Stack, Typography } from 'src/ui-components';
 
 const Transition = React.forwardRef(function Transition(
@@ -15,7 +15,7 @@ const Transition = React.forwardRef(function Transition(
 });
 
 export type TripItemProps = {
-  data: Trip;
+  data: Place;
 };
 export const TripItem = ({ data }: TripItemProps) => {
   const [showDialog, setShowDialog] = useState(false);

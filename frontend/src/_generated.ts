@@ -21,3 +21,9 @@ export type ImagePath =
 | `flagi/grecja.png`
 | `flagi/japonia.png`
 | `flagi/polska.png`
+| `flagi/korea.png`
+| `flagi/czechy.png`
+| `flagi/turcja.png`
+| `flagi/tajlandia.png`
+| `flagi/wlochy.png`
+| `flagi/dania.png`

@@ -25,6 +25,12 @@ namespace Admin.Models
             new Image("grecja.png"),
             new Image("japonia.png"),
             new Image("polska.png"),
+            new Image("korea.png"),
+            new Image("czechy.png"),
+            new Image("turcja.png"),
+            new Image("tajlandia.png"),
+            new Image("wlochy.png"),
+            new Image("dania.png"),
         ];
 
 
@@ -36,7 +42,9 @@ namespace Admin.Models
                     new ImagesSection("Wszystkie flagi") {
                         Images = _allFlags,
                         IsUnchanged = true,
-                        IsSortable = false
+                        IsSortable = false,
+                        Orientation = ImageOrientation.Unknown,
+                        Cols = Columns.Three,
                     }
                 ]
             }

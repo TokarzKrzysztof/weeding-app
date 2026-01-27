@@ -2,15 +2,15 @@ import CloseIcon from '@mui/icons-material/Close';
 import useId from '@mui/material/utils/useId';
 import { TransitionProps } from 'notistack';
 import { forwardRef, useEffect, useRef } from 'react';
-import { Trip } from 'src/pages/Home/data';
+import { Place } from 'src/pages/Home/data';
 import {
-    buildImgSrc,
-    Dialog,
-    DialogContent,
-    IconButton,
-    Slide,
-    Stack,
-    Typography,
+  buildImgSrc,
+  Dialog,
+  DialogContent,
+  IconButton,
+  Slide,
+  Stack,
+  Typography,
 } from 'src/ui-components';
 
 // global variable for all FullscreenDialogs
@@ -28,7 +28,7 @@ const Transition = forwardRef(function Transition(
 export type FullscreenDialogProps = {
   onClose: () => void;
   open: boolean;
-  data: Trip;
+  data: Place;
 };
 
 export const FullscreenDialog = ({ open, onClose, data, ...props }: FullscreenDialogProps) => {
