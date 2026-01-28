@@ -75,14 +75,14 @@ export const FolderNodeImagesSection = ({ item }: FolderNodeImagesSectionProps) 
     const clipboardItems = await navigator.clipboard.read();
     const item = clipboardItems[0];
     if (item.types.length === 0) {
-       enqueueSnackbar({
+      enqueueSnackbar({
         variant: 'error',
         message: 'Nie ma niczego do wklejenia',
       });
       return;
     }
-    if (!item.types.some(x => x.startsWith('image/'))) {
-       enqueueSnackbar({
+    if (!item.types.some((x) => x.startsWith('image/'))) {
+      enqueueSnackbar({
         variant: 'error',
         message: 'Wybrany plik nie jest zdjęciem',
       });
@@ -93,7 +93,7 @@ export const FolderNodeImagesSection = ({ item }: FolderNodeImagesSectionProps) 
       if (type.startsWith('image/')) {
         const blob = await item.getType(type);
 
-        activeImg.file = new File([blob], "image");
+        activeImg.file = new File([blob], 'image');
         activeImg.src = URL.createObjectURL(blob);
 
         setImages([...images]);
@@ -215,8 +215,6 @@ const ImageItem = ({
     if (section.orientation === ImageOrientation.Vertical) return '1/1.5';
     if (section.orientation === ImageOrientation.Unknown) return undefined;
   }, [section.orientation]);
-
-
 
   const showRemoveButton = !!img.file;
   const isActive = activeImg === img;
