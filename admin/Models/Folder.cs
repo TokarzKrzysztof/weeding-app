@@ -37,9 +37,20 @@ namespace Admin.Models
             new Image("ateny.jpg"),
             new Image("rodos.jpg"),
             new Image("santorini.jpg"),
+            new Image("kreta.jpg"),
+            new Image("symi.jpg"),
+            new Image("delfy-arachova.jpg"),
+
             new Image("tokio.jpg"),
             new Image("osaka.jpg"),
-            new Image("kyoto.jpg"),
+            new Image("kioto.jpg"),
+
+            new Image("wenecja.jpg"),
+
+            new Image("bangkok.jpg"),
+            new Image("phuket.jpg"),
+            new Image("phiphi.jpg"),
+            new Image("krabi.jpg"),
         ];
 
 

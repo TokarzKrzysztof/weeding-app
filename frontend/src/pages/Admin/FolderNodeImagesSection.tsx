@@ -218,6 +218,7 @@ const ImageItem = ({
 
   const showRemoveButton = !!img.file;
   const isActive = activeImg === img;
+
   return (
     <Box
       ref={setNodeRef}
