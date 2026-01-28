@@ -27,3 +27,9 @@ export type ImagePath =
 | `flagi/tajlandia.png`
 | `flagi/wlochy.png`
 | `flagi/dania.png`
+| `miniaturki/ateny.jpg`
+| `miniaturki/rodos.jpg`
+| `miniaturki/santorini.jpg`
+| `miniaturki/tokio.jpg`
+| `miniaturki/osaka.jpg`
+| `miniaturki/kyoto.jpg`

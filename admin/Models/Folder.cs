@@ -32,6 +32,15 @@ namespace Admin.Models
             new Image("wlochy.png"),
             new Image("dania.png"),
         ];
+        private static List<Image> _allMiniatures =
+        [
+            new Image("ateny.jpg"),
+            new Image("rodos.jpg"),
+            new Image("santorini.jpg"),
+            new Image("tokio.jpg"),
+            new Image("osaka.jpg"),
+            new Image("kyoto.jpg"),
+        ];
 
 
         public static List<Folder> FoldersTree = new List<Folder>()
@@ -41,6 +50,18 @@ namespace Admin.Models
                 Sections = [
                     new ImagesSection("Wszystkie flagi") {
                         Images = _allFlags,
+                        IsUnchanged = true,
+                        IsSortable = false,
+                        Orientation = ImageOrientation.Unknown,
+                        Cols = Columns.Three,
+                    }
+                ]
+            },
+            new Folder("miniaturki")
+            {
+                Sections = [
+                    new ImagesSection("Wszystkie miniaturki") {
+                        Images = _allMiniatures,
                         IsUnchanged = true,
                         IsSortable = false,
                         Orientation = ImageOrientation.Unknown,

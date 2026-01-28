@@ -45,15 +45,17 @@ export const FullscreenDialog = ({ open, onClose, data, ...props }: FullscreenDi
   useEffect(() => {
     if (!open) return;
 
-    window.addEventListener('popstate', (e) => {
+    const handler = () => {
       const lastId = openedDialogIds[openedDialogIds.length - 1];
       if (lastId === id) {
         onClose();
         openedDialogIds.pop();
       }
-    });
+    };
+
+    window.addEventListener('popstate', handler);
     return () => {
-      window.removeEventListener('popstate', onClose);
+      window.removeEventListener('popstate', handler);
     };
   }, [open]);
 

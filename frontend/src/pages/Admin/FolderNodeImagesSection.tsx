@@ -1,7 +1,9 @@
 import { DndContext, DragEndEvent, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { SortableContext, useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { useMemo, useRef, useState } from 'react';
+import { atom, useAtom, useAtomValue } from 'jotai';
+import { useSnackbar } from 'notistack';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Img } from 'src/components/Img';
 import { useFilePicker } from 'src/hooks/useFilePicker';
 import { Image } from 'src/models/admin/image';
@@ -9,6 +11,8 @@ import { ImageOrientation, ImagesSection } from 'src/models/admin/images-section
 import { useEditImages } from 'src/queries/folder-queries';
 import { Box, buildImgSrc, Button, Icon, IconButton, Stack, Typography } from 'src/ui-components';
 import { move } from 'src/utils/array-utils';
+
+const activeImgAtom = atom<ExtendedImage | null>(null);
 
 type ExtendedImage = Image & {
   src?: string;
@@ -23,13 +27,15 @@ export const FolderNodeImagesSection = ({ item }: FolderNodeImagesSectionProps) 
   const [images, setImages] = useState<ExtendedImage[]>(item.images);
   const { editImages, editImagesInProgress } = useEditImages();
   const { showPicker } = useFilePicker();
+  const { enqueueSnackbar } = useSnackbar();
+  const activeImg = useAtomValue(activeImgAtom);
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
         // make remove button working
         distance: 8,
       },
-    })
+    }),
   );
 
   const multiUpload = () => {
@@ -55,6 +61,47 @@ export const FolderNodeImagesSection = ({ item }: FolderNodeImagesSectionProps) 
       setImages([...images]);
       setDirty(true);
     });
+  };
+
+  const pasteUpload = async (activeImg: ExtendedImage | null) => {
+    if (activeImg === null) {
+      enqueueSnackbar({
+        variant: 'error',
+        message: 'Kliknij na konkretnie zdjęcie aby wkleić',
+      });
+      return;
+    }
+
+    const clipboardItems = await navigator.clipboard.read();
+    const item = clipboardItems[0];
+    if (item.types.length === 0) {
+       enqueueSnackbar({
+        variant: 'error',
+        message: 'Nie ma niczego do wklejenia',
+      });
+      return;
+    }
+    if (!item.types.some(x => x.startsWith('image/'))) {
+       enqueueSnackbar({
+        variant: 'error',
+        message: 'Wybrany plik nie jest zdjęciem',
+      });
+      return;
+    }
+
+    for (const type of item.types) {
+      if (type.startsWith('image/')) {
+        const blob = await item.getType(type);
+
+        activeImg.file = new File([blob], "image");
+        activeImg.src = URL.createObjectURL(blob);
+
+        setImages([...images]);
+        setDirty(true);
+
+        break;
+      }
+    }
   };
 
   const removeUploadedFile = (img: ExtendedImage) => {
@@ -84,9 +131,18 @@ export const FolderNodeImagesSection = ({ item }: FolderNodeImagesSectionProps) 
         onSuccess: () => {
           window.location.reload();
         },
-      }
+      },
     );
   };
+
+  useEffect(() => {
+    const handler = () => pasteUpload(activeImg);
+
+    window.addEventListener('paste', handler);
+    return () => {
+      window.removeEventListener('paste', handler);
+    };
+  }, [activeImg, pasteUpload]);
 
   return (
     <Box p={2} mt={1} sx={{ border: '1px solid black', borderRadius: 5, maxWidth: 1000 }}>
@@ -152,6 +208,7 @@ const ImageItem = ({
     disabled: !section.isSortable,
   });
   const [isHover, setIsHover] = useState(false);
+  const [activeImg, setActiveImg] = useAtom(activeImgAtom);
 
   const aspectRatio = useMemo(() => {
     if (section.orientation === ImageOrientation.Horizontal) return '1.5/1';
@@ -159,21 +216,26 @@ const ImageItem = ({
     if (section.orientation === ImageOrientation.Unknown) return undefined;
   }, [section.orientation]);
 
+
+
   const showRemoveButton = !!img.file;
+  const isActive = activeImg === img;
   return (
     <Box
       ref={setNodeRef}
       key={img.path}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
+      onClick={() => setActiveImg(isActive ? null : img)}
       sx={{
         position: 'relative',
-        backgroundColor: 'lightgrey',
+        backgroundColor: isActive ? 'grey' : 'lightgrey',
         aspectRatio,
         alignSelf: section.orientation === ImageOrientation.Unknown ? 'flex-start' : undefined,
         transform: CSS.Transform.toString(transform),
         transition,
-        cursor: section.isSortable ? 'move' : undefined,
+        cursor: section.isSortable ? 'move' : 'pointer',
+        minHeight: 50,
       }}
       {...attributes}
       {...listeners}
