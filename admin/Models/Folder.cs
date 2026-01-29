@@ -34,6 +34,7 @@ namespace Admin.Models
         ];
         private static List<Image> _allMiniatures =
         [
+            // Grecja
             new Image("ateny.jpg"),
             new Image("rodos.jpg"),
             new Image("santorini.jpg"),
@@ -41,16 +42,38 @@ namespace Admin.Models
             new Image("symi.jpg"),
             new Image("delfy-arachova.jpg"),
 
+            // Japonia
             new Image("tokio.jpg"),
             new Image("osaka.jpg"),
             new Image("kioto.jpg"),
 
+            // Włochy
             new Image("wenecja.jpg"),
 
+            // Tajlandia
             new Image("bangkok.jpg"),
             new Image("phuket.jpg"),
             new Image("phiphi.jpg"),
             new Image("krabi.jpg"),
+
+            // Korea
+            new Image("seul.jpg"),
+            new Image("busan.jpg"),
+
+            // Polska
+            new Image("torun.jpg"),
+            new Image("wroclaw.jpg"),
+            new Image("lodz.jpg"),
+            new Image("krakow.jpg"),
+
+            // Czechy
+            new Image("adrspach.jpg"),
+
+            // Dania
+            new Image("horsens.jpg"),
+
+            // Turcja
+            new Image("side.jpg"),
         ];
 
 
