@@ -228,7 +228,7 @@ const ImageItem = ({
       onClick={() => setActiveImg(isActive ? null : img)}
       sx={{
         position: 'relative',
-        backgroundColor: isActive ? 'grey' : 'lightgrey',
+        backgroundColor: 'lightgrey',
         aspectRatio,
         alignSelf: section.orientation === ImageOrientation.Unknown ? 'flex-start' : undefined,
         transform: CSS.Transform.toString(transform),
@@ -239,6 +239,10 @@ const ImageItem = ({
       {...attributes}
       {...listeners}
     >
+      {isActive && (
+        <Box sx={{ position: 'absolute', inset: 0, background: 'grey', opacity: 0.7 }}></Box>
+      )}
+
       {isHover && !isDragging && (
         <Box
           sx={{
