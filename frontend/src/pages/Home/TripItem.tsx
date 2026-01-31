@@ -1,9 +1,10 @@
 import FlightIcon from '@mui/icons-material/Flight';
 import { TransitionProps } from '@mui/material/transitions';
-import React, { useState } from 'react';
-import { FullscreenDialog } from 'src/pages/Home/FullscreenDialog';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Place } from 'src/pages/Home/data';
-import { buildImgSrc, IconButton, Slide, Stack, Typography } from 'src/ui-components';
+import { AppRoutes } from 'src/router/app-routes';
+import { Box, buildImgSrc, IconButton, Slide, Stack, Typography } from 'src/ui-components';
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -18,21 +19,24 @@ export type TripItemProps = {
   data: Place;
 };
 export const TripItem = ({ data }: TripItemProps) => {
-  const [showDialog, setShowDialog] = useState(false);
 
   return (
     <>
-      <Stack
+      <Box
         sx={{
+          display: 'flex',
           alignItems: 'center',
           borderBottom: '1px solid lightgrey',
           justifyContent: 'space-between',
           p: 2,
+          color: 'inherit',
+          textDecoration: 'none',
           ':nth-last-of-type(1)': {
             borderBottom: 'none',
           },
         }}
-        onClick={() => setShowDialog(true)}
+        component={Link}
+        to={AppRoutes.Home({ place: data.label })}
       >
         <Stack sx={{ alignItems: 'center' }}>
           <img
@@ -45,12 +49,7 @@ export const TripItem = ({ data }: TripItemProps) => {
         <IconButton sx={{ p: 0 }}>
           <FlightIcon sx={{ transform: 'rotate(90deg)' }} />
         </IconButton>
-      </Stack>
-      <FullscreenDialog
-        onClose={() => setShowDialog(false)}
-        open={showDialog}
-        data={data}
-      ></FullscreenDialog>
+      </Box>
     </>
   );
 };

@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-import { ImagePath } from 'src/_generated';
 import { ArdspachContent } from 'src/pages/Home/contents/czech/ArdspachContent';
 import { HorsensContent } from 'src/pages/Home/contents/denmark/HorsensContent';
 import { AthensContent } from 'src/pages/Home/contents/greece/AthensContent';
@@ -24,19 +22,8 @@ import { PhiPhiContent } from 'src/pages/Home/contents/thailand/PhiPhiContent';
 import { PhuketContent } from 'src/pages/Home/contents/thailand/PhuketContent';
 import { SideContent } from 'src/pages/Home/contents/turkey/SideContent';
 
-export type Place = {
-  label: string;
-  imgSrc: ImagePath;
-  dialogContent: ReactNode;
-};
 
-export type Country = {
-  label: string;
-  flagSrc: ImagePath;
-  places: Place[];
-};
-
-export const data: Country[] = [
+export const data = [
   {
     label: 'Grecja',
     flagSrc: 'flagi/grecja.png',
@@ -120,4 +107,8 @@ export const data: Country[] = [
       { label: 'Horsens', imgSrc: 'miniaturki/horsens.jpg', dialogContent: <HorsensContent /> },
     ],
   },
-];
+] as const;
+
+export type Country = (typeof data)[number];
+export type Place = Country['places'][number];
+export type PlaceLabel = Place['label'];

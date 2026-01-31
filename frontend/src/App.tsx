@@ -3,11 +3,9 @@ import { useTheme } from '@mui/material/styles';
 import { ErrorBoundary } from 'react-error-boundary';
 import { Outlet } from 'react-router-dom';
 import { ErrorFallback } from 'src/components/ErrorFallback';
-import { useScroll } from 'src/hooks/useScroll';
 
 function App() {
   const theme = useTheme();
-  useScroll();
 
   return (
     // ErrorBoundary and provider must be here
@@ -19,9 +17,6 @@ function App() {
           },
         }}
       />
-      {/* <MobileContainer>
-        <Outlet />
-      </MobileContainer> */}
       <Outlet />
     </ErrorBoundary>
   );

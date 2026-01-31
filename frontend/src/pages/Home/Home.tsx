@@ -1,5 +1,6 @@
 import { CountryItem } from 'src/pages/Home/CountryItem';
 import { data } from 'src/pages/Home/data';
+import { HomeFullscreenDialog } from 'src/pages/Home/FullscreenDialog';
 import { Container, Typography } from 'src/ui-components';
 
 export const Home = () => {
@@ -18,6 +19,7 @@ export const Home = () => {
           <CountryItem data={x} key={x.label} />
         ))}
       </Container>
+      <HomeFullscreenDialog />
     </>
   );
 };

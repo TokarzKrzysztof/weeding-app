@@ -1,8 +1,11 @@
 import CloseIcon from '@mui/icons-material/Close';
-import useId from '@mui/material/utils/useId';
+import _ from 'lodash';
 import { TransitionProps } from 'notistack';
-import { forwardRef, useEffect, useRef } from 'react';
-import { Place } from 'src/pages/Home/data';
+import { forwardRef } from 'react';
+import { Link } from 'react-router-dom';
+import { useRouteParams } from 'src/hooks/useRouteParams';
+import { data, Place, PlaceLabel } from 'src/pages/Home/data';
+import { AppRoutes, HomeParams } from 'src/router/app-routes';
 import {
   buildImgSrc,
   Dialog,
@@ -13,9 +16,6 @@ import {
   Typography,
 } from 'src/ui-components';
 
-// global variable for all FullscreenDialogs
-const openedDialogIds: string[] = [];
-
 const Transition = forwardRef(function Transition(
   props: TransitionProps & {
     children: React.ReactElement;
@@ -25,102 +25,33 @@ const Transition = forwardRef(function Transition(
   return <Slide direction='up' ref={ref} {...props} />;
 });
 
-export type FullscreenDialogProps = {
-  onClose: () => void;
-  open: boolean;
-  data: Place;
-};
+export type FullscreenDialogProps = {};
 
-export const FullscreenDialog = ({ open, onClose, data, ...props }: FullscreenDialogProps) => {
-  const id = useId();
-  const openedOnceRef = useRef(false);
+export const HomeFullscreenDialog = ({ ...props }: FullscreenDialogProps) => {
+  const [params] = useRouteParams<HomeParams>();
 
-  useEffect(() => {
-    if (open) {
-      window.history.pushState({ id }, '');
-      openedDialogIds.push(id!);
-    }
-  }, [open]);
-
-  useEffect(() => {
-    if (!open) return;
-
-    const handler = () => {
-      const lastId = openedDialogIds[openedDialogIds.length - 1];
-      if (lastId === id) {
-        onClose();
-        openedDialogIds.pop();
-      }
-    };
-
-    window.addEventListener('popstate', handler);
-    return () => {
-      window.removeEventListener('popstate', handler);
-    };
-  }, [open]);
-
-  const closeWithHistoryBack = () => {
-    window.history.back();
-    onClose();
+  const getPlace = (label: PlaceLabel) => {
+    const flatten = _.flattenDeep(data.map((x) => x.places)) as Place[];
+    return flatten.find((x) => x.label === label)!;
   };
 
-  if (open) openedOnceRef.current = true;
-
+  const dialogData = params.place ? getPlace(params.place) : null;
   return (
-    <Dialog
-      open={open}
-      fullScreen
-      TransitionComponent={Transition}
-      onClose={closeWithHistoryBack}
-      //   keepMounted={openedOnceRef.current && keepMounted}
-      {...props}
-    >
+    <Dialog open={!!params.place} fullScreen TransitionComponent={Transition} {...props}>
       <Stack sx={{ p: 1, pl: 2, background: '#fff1f7', justifyContent: 'space-between' }}>
         <Stack sx={{ alignItems: 'center' }}>
           <img
             style={{ width: 30, aspectRatio: '1/1', borderRadius: '50%' }}
-            src={buildImgSrc(data.imgSrc)}
+            src={dialogData?.imgSrc ? buildImgSrc(dialogData?.imgSrc) : undefined}
             alt=''
           />
-          <Typography sx={{ ml: 1 }}>{data.label}</Typography>
+          <Typography sx={{ ml: 1 }}>{dialogData?.label}</Typography>
         </Stack>
-        <IconButton onClick={closeWithHistoryBack}>
+        <IconButton component={Link} to={AppRoutes.Home()}>
           <CloseIcon />
         </IconButton>
       </Stack>
-      {/* <AppBar sx={{ position: 'sticky' }}>
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <Stack alignItems='center'>
-            <IconButton color='inherit' onClick={closeWithHistoryBack}>
-              <Icon name='close' />
-            </IconButton>
-            {title && (
-              <Typography ml={1} fontSize={18}>
-                {title}
-              </Typography>
-            )}
-          </Stack>
-          <Stack alignItems='center'>
-            {onClear && (
-              <Button color='inherit' variant='text' onClick={onClear}>
-                WYCZYŚĆ
-              </Button>
-            )}
-            {onSave && (
-              <Button
-                type='submit'
-                color='inherit'
-                variant='text'
-                disabled={saveDisabled}
-                onClick={onSave}
-              >
-                {saveButtonText ? saveButtonText.toUpperCase() : 'ZAPISZ'}
-              </Button>
-            )}
-          </Stack>
-        </Toolbar>
-      </AppBar> */}
-      <DialogContent sx={{ textAlign: 'center' }}>{data.dialogContent}</DialogContent>
+      <DialogContent sx={{ textAlign: 'center' }}>{dialogData?.dialogContent}</DialogContent>
     </Dialog>
   );
 };
