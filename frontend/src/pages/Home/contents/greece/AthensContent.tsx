@@ -1,49 +1,32 @@
-import { useTheme } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
-import { AppRoutes } from 'src/router/app-routes';
-import { Button, Typography } from 'src/ui-components';
-
-const RedirectButton = () => {
-  const theme = useTheme();
-  const navigate = useNavigate();
-  const to = AppRoutes.Home({ place: 'Delfy / Arachova' });
-
-  const handleClick = (event: React.MouseEvent) => {
-    event.preventDefault();
-
-    navigate(AppRoutes.Home());
-    setTimeout(() => {
-      navigate(to);
-    }, theme.transitions.duration.enteringScreen);
-  };
-
-  return (
-    <Button component={Link} to={to} onClick={handleClick}>
-      Delfy arachova
-    </Button>
-  );
-};
+import { RedirectButton } from 'src/components/RedirectButton';
+import { ImagesSet } from 'src/pages/Home/ImagesSet';
+import { Typography } from 'src/ui-components';
 
 export const AthensContent = () => {
   return (
     <>
-      {/* <ImagesSet
-                  images={['o-mnie/sekcja-2-1.jpg', 'o-mnie/sekcja-2-2.jpg', 'o-mnie/sekcja-2-3.jpg']}
-                /> */}
+      <ImagesSet
+        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+      />
       <Typography my={3}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum quidem magnam ullam. Ratione
-        itaque quia saepe, nihil incidunt sapiente nesciunt eveniet quaerat officiis error expedita
-        magnam unde quo fugiat voluptatum!
+        Ateny to stolica Grecji i jedno z najstarszych miast świata. Uznawane są za kolebkę
+        demokracji i ważne centrum starożytnej kultury. Nad miastem góruje Akropol Ateński z
+        imponującym Partenonem - jednym z najsłynniejszych zabytków starożytnej Grecji. Współczesne
+        Ateny łączą bogatą historię z życiem pełnym śródziemnomorskiego klimatu.
       </Typography>
-      <RedirectButton />
-      {/* <Button component={Link} to={AppRoutes.Home({ place: 'Delfy / Arachova' })}>
-        Delfy arachova
-      </Button> */}
-      {/* <ImagesSet images={['o-mnie/sekcja-2-2.jpg', 'o-mnie/sekcja-2-3.jpg']} /> */}
+
+      <ImagesSet
+        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+      />
       <Typography my={3}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum quidem magnam ullam. Ratione
-        itaque quia saepe, nihil incidunt sapiente nesciunt eveniet quaerat officiis error expedita
-        magnam unde quo fugiat voluptatum!
+        Byliśmy tam razem z rodzicami Krzyśka i jego siostrą, a decyzja o wyjeździe była bardzo
+        spontaniczna, gdy znaleźliśmy okazję.
+        <br /> Odwiedziliśmy Akropol i najważniejsze miejsca w stolicy, w tym również oddalone o 2h
+        jazdy od Aten <RedirectButton place='Delfy / Arachova'>Delfy</RedirectButton>.
+        Wypożyczaliśmy auto, a jazda po Atenach była momentami chaotyczna, ale daliśmy radę!
+        <br /> <br />
+        <b>Ciekawostka:</b> Nocowaliśmy w najbardziej niebezpiecznej dzielnicy Aten pełnej
+        narkomanów, gdzie o 11:00 w ciągu dnia normalnym było wciąganie przez nos 🤣
       </Typography>
     </>
   );
