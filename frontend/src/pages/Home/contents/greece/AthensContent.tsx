@@ -20,13 +20,15 @@ export const AthensContent = () => {
       />
       <Typography my={3}>
         Byliśmy tam razem z rodzicami Krzyśka i jego siostrą, a decyzja o wyjeździe była bardzo
-        spontaniczna, gdy znaleźliśmy okazję.
-        <br /> Odwiedziliśmy Akropol i najważniejsze miejsca w stolicy, w tym również oddalone o 2h
-        jazdy od Aten <RedirectButton place='Delfy / Arachova'>Delfy</RedirectButton>.
-        Wypożyczaliśmy auto, a jazda po Atenach była momentami chaotyczna, ale daliśmy radę!
-        <br /> <br />
-        <b>Ciekawostka:</b> Nocowaliśmy w najbardziej niebezpiecznej dzielnicy Aten pełnej
-        narkomanów, gdzie o 11:00 w ciągu dnia normalnym było wciąganie przez nos 🤣
+        spontaniczna - po prostu trafiliśmy na dobrą okazję.
+        <br /> Zwiedziliśmy Akropol i najważniejsze miejsca w stolicy, a także wybraliśmy się do
+        oddalonych o około 2 godziny drogi od Aten <RedirectButton place='Delfy / Arachova'>Delf</RedirectButton>. Na miejscu wypożyczyliśmy samochód - jazda
+        po Atenach bywała momentami dość chaotyczna, ale ostatecznie daliśmy radę! 🚗
+        <br />
+        <br />
+        <b>Ciekawostka:</b> Nocowaliśmy w podobno najbardziej niebezpiecznej dzielnicy Aten, pełnej
+        narkomanów. Nikogo tam nie dziwiło, że o 11:00 w środku dnia ktoś stał na ulicy i wciągał
+        coś przez nos. 🤣
       </Typography>
     </>
   );
