@@ -76,6 +76,21 @@ namespace Admin.Models
             new Image("side.jpg"),
         ];
 
+        public static Folder GenerateFolder(string country, List<string> places)
+        {
+            return new Folder(country.ToLower())
+            {
+                Sections = places.Select(x => x.ToLower()).Select(x => new ImagesSection(x)
+                {
+                    Images = [
+                        new Image($"{x}-1-1"), new Image($"{x}-1-2"), new Image($"{x}-1-3"), new Image($"{x}-1-4"),
+                        new Image($"{x}-2-1"), new Image($"{x}-2-2"), new Image($"{x}-2-3"), new Image($"{x}-2-4")
+                        ],
+                    Cols = Columns.Four
+                }).ToList()
+            };
+        }
+
 
         public static List<Folder> FoldersTree = new List<Folder>()
         {
@@ -114,7 +129,8 @@ namespace Admin.Models
                         Cols = Columns.Three,
                     }
                 ]
-            }
+            },
+            GenerateFolder("Grecja", ["Ateny", "Rodos", "Delfy", "Kreta", "Santorini", "Symi"])
             //new Folder("glowna")
             //{
             //    Sections = [

@@ -6,7 +6,7 @@ export const AthensContent = () => {
   return (
     <>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['grecja/ateny-1-1', 'grecja/ateny-1-2', 'grecja/ateny-1-3']}
       />
       <Typography my={3}>
         Ateny to stolica Grecji i jedno z najstarszych miast świata. Uznawane są za kolebkę
