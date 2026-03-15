@@ -1,47 +1,30 @@
-import { useTheme } from '@mui/material/styles';
 import {
   default as MuiTypography,
   TypographyProps as MuiTypographyProps,
-  TypographyTypeMap
+  TypographyTypeMap,
 } from '@mui/material/Typography';
-import { ForwardedRef, useMemo } from 'react';
+import { ForwardedRef } from 'react';
 import { typedForwardRef } from 'src/utils/types/forward-ref';
 
-export const largeTextFontSize = '1.2rem'
+export const largeTextFontSize = '1.2rem';
 
 export type TypographyProps<D extends React.ElementType = TypographyTypeMap['defaultComponent']> =
-  MuiTypographyProps<D, { component?: D }> & {
-    type?: 'title' | 'sub-title' | 'text' | 'large-text';
-  };
+  MuiTypographyProps<D, { component?: D }> & {};
 
 export const TypographyInner = <
-  D extends React.ElementType = TypographyTypeMap['defaultComponent']
+  D extends React.ElementType = TypographyTypeMap['defaultComponent'],
 >(
   { sx, type = 'text', ...props }: TypographyProps<D>,
-  ref: ForwardedRef<HTMLElement>
+  ref: ForwardedRef<HTMLElement>,
 ) => {
-  const theme = useTheme();
 
-  const typeProps = useMemo(() => {
-    if (type === 'title') {
-      return {
-        component: 'h2',
-        sx: { fontFamily: '"Pacifico", sans-serif', fontSize: '3rem', textAlign: 'center', ...sx },
-      } as const;
-    }
-    if (type === 'sub-title') {
-      return {
-        component: 'h3',
-        sx: { fontFamily: '"Pacifico", sans-serif', fontSize: '2rem', textAlign: 'center', ...sx },
-      } as const;
-    }
-    if(type === 'large-text') {
-      return { sx: { fontFamily: '"Noto Sans", sans-serif', fontSize: largeTextFontSize, ...sx } };
-    }
-    return { sx: { fontFamily: '"Noto Sans", sans-serif', ...sx } };
-  }, [type, sx]);
-
-  return <MuiTypography {...typeProps} {...props} ref={ref}></MuiTypography>;
+  return (
+    <MuiTypography
+      sx={{ fontFamily: '"Nunito Sans", sans-serif', color: '#32383e', ...sx }}
+      {...props}
+      ref={ref}
+    ></MuiTypography>
+  );
 };
 
 export const Typography = typedForwardRef(TypographyInner);

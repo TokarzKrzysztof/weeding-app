@@ -27,7 +27,6 @@ export const ButtonInner = <D extends React.ElementType = ButtonTypeMap['default
       sx={{
         textTransform: 'none',
         borderRadius: 5,
-        fontFamily: '"Sour Gummy", sans-serif',
         ...sx,
       }}
       {...props}

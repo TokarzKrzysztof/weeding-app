@@ -18,6 +18,7 @@ export class PortfolioImgCount {
    static readonly Reportage = 40;
 }
 export type ImagePath =
+| `logo/logo.png`
 | `flagi/grecja.png`
 | `flagi/japonia.png`
 | `flagi/polska.png`

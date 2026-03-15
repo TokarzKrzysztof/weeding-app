@@ -79,6 +79,18 @@ namespace Admin.Models
 
         public static List<Folder> FoldersTree = new List<Folder>()
         {
+            new Folder("logo")
+            {
+                Sections = [
+                    new ImagesSection("Logo na górze") {
+                        Images = [new Image("logo.png")],
+                        IsUnchanged = true,
+                        IsSortable = false,
+                        Orientation = ImageOrientation.Unknown,
+                        Cols = Columns.Three,
+                    }
+                ]
+            },
             new Folder("flagi")
             {
                 Sections = [
