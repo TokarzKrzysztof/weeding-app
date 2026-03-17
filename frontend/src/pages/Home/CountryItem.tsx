@@ -42,7 +42,7 @@ export const CountryItem = ({ data, delay }: CountryItemProps) => {
             height: 80,
             borderRadius: 3,
             border: `1px solid ${theme.palette.grey[200]}`,
-            transition: '300ms'
+            transition: '200ms'
           }}
           onClick={toggleOpen}
         >
