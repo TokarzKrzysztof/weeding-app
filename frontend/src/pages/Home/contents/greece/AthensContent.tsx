@@ -16,7 +16,7 @@ export const AthensContent = () => {
       </Typography>
 
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['grecja/ateny-2-1', 'grecja/ateny-2-2', 'grecja/ateny-2-3']}
       />
       <Typography my={3}>
         Byliśmy tam razem z rodzicami Krzyśka i jego siostrą, a decyzja o wyjeździe była bardzo

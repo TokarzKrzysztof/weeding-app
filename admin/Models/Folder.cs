@@ -130,7 +130,15 @@ namespace Admin.Models
                     }
                 ]
             },
-            GenerateFolder("Grecja", ["Ateny", "Rodos", "Delfy", "Kreta", "Santorini", "Symi"])
+            GenerateFolder("Czechy", ["Ardspach"]),
+            GenerateFolder("Dania", ["Horsens"]),
+            GenerateFolder("Grecja", ["Ateny", "Rodos", "Delfy", "Kreta", "Santorini", "Symi"]),
+            GenerateFolder("Włochy", ["Wenecja"]),
+            GenerateFolder("Japonia", ["Kioto", "Osaka", "Tokio"]),
+            GenerateFolder("Korea", ["Busan", "Seul"]),
+            GenerateFolder("Polska", ["Krakow", "Lodz", "Torun", "Wroclaw"]),
+            GenerateFolder("Tajlandia", ["Bangkok", "Krabi", "Phi-Phi", "Phuket"]),
+            GenerateFolder("Turcja", ["Side"]),
             //new Folder("glowna")
             //{
             //    Sections = [
