@@ -38,12 +38,11 @@ export const CountryItem = ({ data, delay }: CountryItemProps) => {
             alignItems: 'center',
             justifyContent: 'center',
             mt: 2,
-            boxShadow: 4,
+            boxShadow: isExpanded ? 5 : 2,
             height: 80,
             borderRadius: 3,
-            border: '2px solid transparent',
-            borderColor: isExpanded ? '#e9c4ec' : undefined,
-            transition: '200ms',
+            border: `1px solid ${theme.palette.grey[200]}`,
+            transition: '300ms'
           }}
           onClick={toggleOpen}
         >
