@@ -5,7 +5,7 @@ export const RodosContent = () => {
   return (
     <>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['grecja/rodos-1-1', 'grecja/rodos-1-2', 'grecja/rodos-1-3']}
       />
       <Typography my={3}>
         Rodos to jedna z największych wysp Grecji, znana z pięknych plaż, słonecznej pogody i
@@ -15,7 +15,7 @@ export const RodosContent = () => {
       </Typography>
 
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['grecja/rodos-2-1', 'grecja/rodos-2-2', 'grecja/rodos-2-3']}
       />
       <Typography my={3}>
         Rodos wspominamy jako jeden z naszych najlepszych wyjazdów. 🥰 <br /> Było trochę zwiedzania, a

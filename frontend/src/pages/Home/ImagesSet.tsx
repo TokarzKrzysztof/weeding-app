@@ -6,7 +6,12 @@ import { Box, buildImgSrc, Stack } from 'src/ui-components';
 export const ImagesSet = ({ images }: { images: ImagePath[] }) => {
   return (
     <Stack>
-      <ImageCard img={images[0]} sx={{ flex: 1 }} aspectRatio='1/1.3' rotate={10} />
+      <ImageCard
+        img={images[0]}
+        sx={{ flex: 1, maxWidth: images.length === 1 ? '80%' : undefined, mx: 'auto' }}
+        aspectRatio='1/1.3'
+        rotate={10}
+      />
       {images[1] && <ImageCard img={images[1]} sx={{ flex: 1 }} aspectRatio='1/1.3' rotate={-3} />}
       {images[2] && <ImageCard img={images[2]} sx={{ flex: 1 }} aspectRatio='1/1.3' rotate={10} />}
       {images[3] && <ImageCard img={images[3]} sx={{ flex: 1 }} aspectRatio='1/1.3' rotate={-3} />}

@@ -92,8 +92,8 @@ namespace Admin.Controllers
         {
             if (section.ImageSize == ImageSize.Small)
             {
-                image.Resize(1000, 1000);
-                image.Quality = 75;
+                image.Resize(300, 300);
+                image.Quality = 100;
             }
             else if (section.ImageSize == ImageSize.Large)
             {

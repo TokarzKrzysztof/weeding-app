@@ -86,7 +86,8 @@ namespace Admin.Models
                         new Image($"{x}-1-1"), new Image($"{x}-1-2"), new Image($"{x}-1-3"), new Image($"{x}-1-4"),
                         new Image($"{x}-2-1"), new Image($"{x}-2-2"), new Image($"{x}-2-3"), new Image($"{x}-2-4")
                         ],
-                    Cols = Columns.Four
+                    Cols = Columns.Four,
+                    ImageSize = ImageSize.Small,
                 }).ToList()
             };
         }
