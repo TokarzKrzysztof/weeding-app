@@ -16,6 +16,7 @@ export const RodosContent = () => {
 
       <ImagesSet
         images={['grecja/rodos-2-1', 'grecja/rodos-2-2', 'grecja/rodos-2-3']}
+        firstHorizontal
       />
       <Typography my={3}>
         Rodos wspominamy jako jeden z naszych najlepszych wyjazdów. 🥰 <br /> Było trochę zwiedzania, a

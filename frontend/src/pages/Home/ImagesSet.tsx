@@ -3,7 +3,12 @@ import { ImagePath } from 'src/_generated';
 import { Img } from 'src/components/Img';
 import { Box, buildImgSrc, Stack } from 'src/ui-components';
 
-export const ImagesSet = ({ images }: { images: ImagePath[] }) => {
+export type ImagesSetProps = {
+  images: ImagePath[];
+  firstHorizontal?: boolean;
+};
+export const ImagesSet = ({ images, firstHorizontal }: ImagesSetProps) => {
+  if (firstHorizontal) return <ImagesSetWithFirstHorizontal images={images} />;
   return (
     <Stack>
       <ImageCard
@@ -16,6 +21,25 @@ export const ImagesSet = ({ images }: { images: ImagePath[] }) => {
       {images[2] && <ImageCard img={images[2]} sx={{ flex: 1 }} aspectRatio='1/1.3' rotate={10} />}
       {images[3] && <ImageCard img={images[3]} sx={{ flex: 1 }} aspectRatio='1/1.3' rotate={-3} />}
     </Stack>
+  );
+};
+
+const ImagesSetWithFirstHorizontal = ({ images }: Pick<ImagesSetProps, 'images'>) => {
+  return (
+    <Box sx={{mx: 'auto', maxWidth: '90%'}}>
+      <ImageCard img={images[0]} aspectRatio='1.6/1' rotate={0} />
+      <Stack sx={{ mt: -8 }}>
+        {images[1] && (
+          <ImageCard img={images[1]} sx={{ flex: 1 }} aspectRatio='1/1.3' rotate={-10} />
+        )}
+        {images[2] && (
+          <ImageCard img={images[2]} sx={{ flex: 1 }} aspectRatio='1/1.3' rotate={10} />
+        )}
+        {/* {images[3] && (
+          <ImageCard img={images[3]} sx={{ flex: 1 }} aspectRatio='1/1.3' rotate={-3} />
+        )} */}
+      </Stack>
+    </Box>
   );
 };
 
