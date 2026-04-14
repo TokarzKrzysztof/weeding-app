@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/weeding-app/static/css/main.311d0e9b.css",
+    "main.js": "/weeding-app/static/js/main.d08532d7.js",
+    "static/js/546.c1db3e23.chunk.js": "/weeding-app/static/js/546.c1db3e23.chunk.js",
+    "static/js/884.e8e2e994.chunk.js": "/weeding-app/static/js/884.e8e2e994.chunk.js",
+    "static/js/453.482b4965.chunk.js": "/weeding-app/static/js/453.482b4965.chunk.js",
+    "static/js/411.0be40583.chunk.js": "/weeding-app/static/js/411.0be40583.chunk.js",
+    "static/js/648.dcef41c0.chunk.js": "/weeding-app/static/js/648.dcef41c0.chunk.js",
+    "index.html": "/weeding-app/index.html",
+    "main.311d0e9b.css.map": "/weeding-app/static/css/main.311d0e9b.css.map",
+    "main.d08532d7.js.map": "/weeding-app/static/js/main.d08532d7.js.map",
+    "546.c1db3e23.chunk.js.map": "/weeding-app/static/js/546.c1db3e23.chunk.js.map",
+    "884.e8e2e994.chunk.js.map": "/weeding-app/static/js/884.e8e2e994.chunk.js.map",
+    "453.482b4965.chunk.js.map": "/weeding-app/static/js/453.482b4965.chunk.js.map",
+    "411.0be40583.chunk.js.map": "/weeding-app/static/js/411.0be40583.chunk.js.map",
+    "648.dcef41c0.chunk.js.map": "/weeding-app/static/js/648.dcef41c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.311d0e9b.css",
+    "static/js/main.d08532d7.js"
+  ]
+}

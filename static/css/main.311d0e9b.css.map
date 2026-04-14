@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.311d0e9b.css","mappings":"AAAA,EACE,qBAAsB,CACtB,QAAS,CACT,SACF,CAEA,KACE,gCACF","sources":["index.css"],"sourcesContent":["* {\r\n  box-sizing: border-box;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\nbody {\r\n  font-family: 'Noto Sans', sans-serif\r\n}"],"names":[],"sourceRoot":""}

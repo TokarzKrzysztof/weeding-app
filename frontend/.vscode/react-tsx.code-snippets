@@ -1,0 +1,31 @@
+{
+  // Place your frontend-react workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  "React component": {
+    "prefix": ["comp"],
+    "body": [
+      "export type ${1:Component}Props = {",
+      " ",
+      "}",
+      "export const ${1:Component} = ({ ...props }: ${1:Component}Props) => {",
+      "  return null;",
+      "}"
+    ],
+    "description": "React component"
+  },
+  "React state": {
+    "prefix": ["state"],
+    "body": ["const [${1:count}, set${1:count}] = useState();"],
+    "description": "React state"
+  },
+  "For snippets": {
+    "prefix": ["snippet"],
+    "body": ["const ${1:label}, ${2:another}  = useState();"],
+    "description": "React snippet"
+  },
+}
