@@ -2,6 +2,7 @@
   "name": "frontend-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tokarzkrzysztof.github.io/weeding-app/",
   "dependencies": {
     "@dnd-kit/core": "^6.1.0",
     "@dnd-kit/sortable": "^8.0.0",
@@ -20,6 +21,7 @@
     "axios": "^1.5.0",
     "env-cmd": "^10.1.0",
     "generate-react-cli": "^8.4.1",
+    "gh-pages": "^6.3.0",
     "jotai": "^2.4.3",
     "localforage": "^1.10.0",
     "lodash": "^4.17.21",
@@ -46,7 +48,9 @@
     "test": "react-app-rewired test --transformIgnorePatterns 'node_modules/(?!axios)/' --resetMocks false",
     "eject": "react-scripts eject",
     "lint": "eslint src/**",
-    "lint:fix": "eslint --fix src/**"
+    "lint:fix": "eslint --fix src/**",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
