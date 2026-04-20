@@ -1,9 +1,9 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createHashRouter, Navigate } from 'react-router-dom';
 import App from 'src/App';
 import { AppRoutes } from 'src/router/app-routes';
 import { routes } from 'src/router/routes/routes';
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: AppRoutes.Home(),
     element: <App />,

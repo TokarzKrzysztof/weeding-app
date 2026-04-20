@@ -2,7 +2,7 @@ import { ImagePath } from 'src/_generated';
 import { Box, BoxProps } from './Box';
 
 export const buildImgSrc = (path: ImagePath) => {
-  return `/images/${path}`;
+  return `images/${path}`;
 };
 
 const alts = [
