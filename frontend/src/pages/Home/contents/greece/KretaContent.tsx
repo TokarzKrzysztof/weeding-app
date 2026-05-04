@@ -1,4 +1,4 @@
-import { RedirectButton } from 'src/components/RedirectButton';
+import { DialogRedirectButton } from 'src/components/RedirectButton';
 import { ImagesSet } from 'src/pages/Home/ImagesSet';
 import { Typography } from 'src/ui-components';
 
@@ -26,7 +26,7 @@ export const KretaContent = ({ ...props }: KretaContentProps) => {
         spotkaliśmy mnóstwo piesków i kotków, które chętnie dokarmialiśmy podczas spacerów. Plaża
         przy naszym hotelu była piaszczysto-kamienista, a każdego dnia mogliśmy próbować
         przepysznego greckiego jedzenia. To właśnie podczas tego wyjazdu wybraliśmy się też na
-        wycieczkę na <RedirectButton place='Santorini'>Santorini</RedirectButton>, które zachwyciło nas swoimi niezwykłymi widokami.
+        wycieczkę na <DialogRedirectButton place='Santorini'>Santorini</DialogRedirectButton>, które zachwyciło nas swoimi niezwykłymi widokami.
       </Typography>
     </>
   );

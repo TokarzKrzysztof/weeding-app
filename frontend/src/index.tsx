@@ -16,11 +16,11 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <SnackbarProvider {...snackbarConfig}>
-        <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
+        <SnackbarProvider {...snackbarConfig}>
           <RouterProvider router={router} />
-        </ThemeProvider>
-      </SnackbarProvider>
+        </SnackbarProvider>
+      </ThemeProvider>
     </QueryClientProvider>
   </React.StrictMode>,
 );

@@ -6,16 +6,21 @@ const StyledMaterialDesignContent = styled(MaterialDesignContent)({
   flexWrap: 'nowrap',
 });
 
+const StyledDefaultSnackbar = styled(StyledMaterialDesignContent)(({theme}) => ({
+  background: '#fff1f7',
+  color: 'inherit'
+}));
+
 export const snackbarConfig: SnackbarProviderProps = {
   maxSnack: 3,
   anchorOrigin: { horizontal: 'left', vertical: 'bottom' },
   action: (snackbarKey) => <SnackbarCloseButton snackbarKey={snackbarKey} />,
   preventDuplicate: true,
-  // Components: {
-  //   default: StyledMaterialDesignContent,
-  //   error: StyledMaterialDesignContent,
-  //   success: StyledMaterialDesignContent,
-  //   warning: StyledMaterialDesignContent,
-  //   info: StyledMaterialDesignContent,
-  // },
+  Components: {
+    default: StyledDefaultSnackbar,
+    error: StyledMaterialDesignContent,
+    success: StyledMaterialDesignContent,
+    warning: StyledMaterialDesignContent,
+    info: StyledMaterialDesignContent,
+  },
 };

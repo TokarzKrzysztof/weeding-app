@@ -1,4 +1,4 @@
-import { RedirectButton } from 'src/components/RedirectButton';
+import { DialogRedirectButton } from 'src/components/RedirectButton';
 import { ImagesSet } from 'src/pages/Home/ImagesSet';
 import { Typography } from 'src/ui-components';
 
@@ -25,7 +25,7 @@ export const WroclawContent = ({ ...props }: WroclawContentProps) => {
         które zdecydowanie zapadły nam w pamięć.
         <br /> Jedliśmy tam również ramen, który smakiem dorównywał tym, które jedliśmy w Japonii -
         jak dotąd to nasz ulubiony w Polsce. Mowa o restauracji Ato Ramen, którego po raz pierwszy
-        spróbowaliśmy wcześniej w <RedirectButton place='Łódź'>Łodzi</RedirectButton>. 🍜
+        spróbowaliśmy wcześniej w <DialogRedirectButton place='Łódź'>Łodzi</DialogRedirectButton>. 🍜
         <br /> Zostawiliśmy tam też swoją kłódkę na jednym z mostów - symbolicznie, z myślą o tym,
         żeby wrócić w to miejsce za kilka lat i sprawdzić, czy nadal tam jest. 🔒
       </Typography>

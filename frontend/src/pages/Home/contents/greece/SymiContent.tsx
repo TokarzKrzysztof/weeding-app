@@ -1,4 +1,4 @@
-import { RedirectButton } from 'src/components/RedirectButton';
+import { DialogRedirectButton } from 'src/components/RedirectButton';
 import { ImagesSet } from 'src/pages/Home/ImagesSet';
 import { Typography } from 'src/ui-components';
 
@@ -21,7 +21,7 @@ export const SymiContent = ({ ...props }: SymiContentProps) => {
       />
       <Typography my={3}>
         Na Symi dopłynęliśmy podczas wycieczki zorganizowanej z{' '}
-        <RedirectButton place='Rodos'>Rodos</RedirectButton>. Już gdy statek wpływał do portu,
+        <DialogRedirectButton place='Rodos'>Rodos</DialogRedirectButton>. Już gdy statek wpływał do portu,
         poczuliśmy, że to miejsce ma w sobie coś wyjątkowego. Kolorowe domki, spokojna atmosfera i
         niesamowite widoki sprawiły, że wyspa od razu zrobiła na nas duże wrażenie. Odwiedziliśmy
         też słynny klasztor, który był jednym z najciekawszych punktów całej wycieczki i tylko
