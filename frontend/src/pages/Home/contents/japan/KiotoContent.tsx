@@ -1,5 +1,5 @@
 import { DialogRedirectButton } from 'src/components/RedirectButton';
-import { ImagesSet } from 'src/pages/Home/ImagesSet';
+import { ImagesSet } from 'src/pages/Trips/ImagesSet';
 import { Typography } from 'src/ui-components';
 
 export type KiotoContentProps = {};
@@ -20,7 +20,7 @@ export const KiotoContent = ({ ...props }: KiotoContentProps) => {
         images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
       />
       <Typography my={3}>
-        Kioto odwiedziliśmy podczas naszej podróży po Japonii razem z <DialogRedirectButton place='Tokio'>Tokio</DialogRedirectButton> i <DialogRedirectButton place='Osaka'>Osaką</DialogRedirectButton>. Miasto od razu
+        Kioto odwiedziliśmy podczas naszej podróży po Japonii razem z <DialogRedirectButton miejsce='Tokio'>Tokio</DialogRedirectButton> i <DialogRedirectButton miejsce='Osaka'>Osaką</DialogRedirectButton>. Miasto od razu
         zrobiło na nas duże wrażenie swoim spokojem, piękną architekturą i zupełnie inną atmosferą
         niż nowoczesne Tokio. Spacerując po świątyniach i ogrodach mogliśmy poczuć prawdziwy klimat
         dawnej Japonii. W Kioto spróbowaliśmy także ramenu ze słynną japońską wołowiną wagyu, a także lokalną tradycyjną kuchnię.

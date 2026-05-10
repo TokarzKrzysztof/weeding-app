@@ -1,5 +1,5 @@
 import { DialogRedirectButton } from 'src/components/RedirectButton';
-import { ImagesSet } from 'src/pages/Home/ImagesSet';
+import { ImagesSet } from 'src/pages/Trips/ImagesSet';
 import { Typography } from 'src/ui-components';
 
 export type TokioContentProps = {};
@@ -27,8 +27,8 @@ export const TokioContent = ({ ...props }: TokioContentProps) => {
         mieście metrem na własną rękę, a Google Maps okazało się niezastąpionym przewodnikiem. 🚇
         Jeśli chodzi o jedzenie, mimo ogromnej ilości możliwości, głównie zajadaliśmy się ramenami
         xD 🍜 - i zdecydowanie nie żałujemy! Podczas wyjazdu odwiedziliśmy też{' '}
-        <DialogRedirectButton place='Kioto'>Kioto</DialogRedirectButton> i{' '}
-        <DialogRedirectButton place='Osaka'>Osakę</DialogRedirectButton>, które były równie fascynujące i
+        <DialogRedirectButton miejsce='Kioto'>Kioto</DialogRedirectButton> i{' '}
+        <DialogRedirectButton miejsce='Osaka'>Osakę</DialogRedirectButton>, które były równie fascynujące i
         zupełnie inne od tętniącego życiem Tokio.
         <br /> <br />
         <b>Ciekawostka:</b> W Tokio w godzinach szczytu w metrze można spotkać tzw. „dopychaczy” -

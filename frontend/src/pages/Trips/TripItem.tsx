@@ -2,7 +2,7 @@ import FlightIcon from '@mui/icons-material/Flight';
 import { TransitionProps } from '@mui/material/transitions';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Place } from 'src/pages/Home/data';
+import { Place } from 'src/pages/Trips/trips-data';
 import { AppRoutes } from 'src/router/app-routes';
 import { Box, buildImgSrc, IconButton, Slide, Stack, Typography } from 'src/ui-components';
 
@@ -36,7 +36,7 @@ export const TripItem = ({ data }: TripItemProps) => {
           },
         }}
         component={Link}
-        to={AppRoutes.Home({ place: data.label })}
+        to={AppRoutes.Trips({ miejsce: data.label })}
       >
         <Stack sx={{ alignItems: 'center' }}>
           <img

@@ -1,5 +1,5 @@
 import { DialogRedirectButton } from 'src/components/RedirectButton';
-import { ImagesSet } from 'src/pages/Home/ImagesSet';
+import { ImagesSet } from 'src/pages/Trips/ImagesSet';
 import { Typography } from 'src/ui-components';
 
 export type BangkokContentProps = {};
@@ -21,9 +21,9 @@ export const BangkokContent = ({ ...props }: BangkokContentProps) => {
       />
       <Typography my={3}>
         Podczas naszej podróży po Tajlandii odwiedziliśmy nie tylko stolicę, ale także trzy wyspy:{' '}
-        <DialogRedirectButton place='Phuket'>Phuket</DialogRedirectButton>,{' '}
-        <DialogRedirectButton place='Krabi'>Krabi</DialogRedirectButton> oraz{' '}
-        <DialogRedirectButton place='Phi Phi'>Phi Phi</DialogRedirectButton>. 🌴 <br /> Pierwsze zaskoczenie
+        <DialogRedirectButton miejsce='Phuket'>Phuket</DialogRedirectButton>,{' '}
+        <DialogRedirectButton miejsce='Krabi'>Krabi</DialogRedirectButton> oraz{' '}
+        <DialogRedirectButton miejsce='Phi Phi'>Phi Phi</DialogRedirectButton>. 🌴 <br /> Pierwsze zaskoczenie
         pojawiło się już po wyjściu z lotniska - uderzył nas ogromny buch wilgotnego gorąca, jakby
         ktoś otworzył drzwi do sauny. 🥵
         <br /> Bangkok zrobił na nas ogromne wrażenie swoją odmienną kulturą, bardzo niskimi cenami

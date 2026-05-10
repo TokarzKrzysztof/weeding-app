@@ -23,7 +23,7 @@ import { PhuketContent } from 'src/pages/Home/contents/thailand/PhuketContent';
 import { SideContent } from 'src/pages/Home/contents/turkey/SideContent';
 
 
-export const data = [
+export const TRIPS_DATA = [
   {
     label: 'Grecja',
     flagSrc: 'flagi/grecja.png',
@@ -109,6 +109,6 @@ export const data = [
   },
 ] as const;
 
-export type Country = (typeof data)[number];
+export type Country = (typeof TRIPS_DATA)[number];
 export type Place = Country['places'][number];
 export type PlaceLabel = Place['label'];

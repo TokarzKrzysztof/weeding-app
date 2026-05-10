@@ -1,5 +1,5 @@
 import { DialogRedirectButton } from "src/components/RedirectButton";
-import { ImagesSet } from "src/pages/Home/ImagesSet";
+import { ImagesSet } from "src/pages/Trips/ImagesSet";
 import { Typography } from "src/ui-components";
 
 export type SantoriniContentProps = {};
@@ -23,7 +23,7 @@ export const SantoriniContent = ({ ...props }: SantoriniContentProps) => {
       <Typography my={3}>
         Santorini było naszym pierwszym wspólnym wyjazdem. 💞 <br />
         Odwiedziliśmy je podczas wycieczki w trakcie pobytu na{' '}
-        <DialogRedirectButton place='Kreta'>Krecie</DialogRedirectButton>. Na miejscu czekały na nas ogromne
+        <DialogRedirectButton miejsce='Kreta'>Krecie</DialogRedirectButton>. Na miejscu czekały na nas ogromne
         tłumy turystów i długie kolejki do zrobienia zdjęć w wąskich uliczkach. Mimo tego widoki
         były po prostu nieziemskie i zdecydowanie warte zobaczenia. Spędziliśmy tam tylko kilka
         godzin, dlatego pozostał lekki niedosyt - chętnie wrócilibyśmy kiedyś na dłużej, żeby w

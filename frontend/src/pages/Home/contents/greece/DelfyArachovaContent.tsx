@@ -1,5 +1,5 @@
 import { DialogRedirectButton } from 'src/components/RedirectButton';
-import { ImagesSet } from 'src/pages/Home/ImagesSet';
+import { ImagesSet } from 'src/pages/Trips/ImagesSet';
 import { Typography } from 'src/ui-components';
 
 export type DelfyArachovaContentProps = {};
@@ -22,7 +22,7 @@ export const DelfyArachovaContent = ({ ...props }: DelfyArachovaContentProps) =>
       />
       <Typography my={3}>
         Odwiedziliśmy Delfy jako część naszej wycieczki do{' '}
-        <DialogRedirectButton place='Ateny'>Aten</DialogRedirectButton>. <br />
+        <DialogRedirectButton miejsce='Ateny'>Aten</DialogRedirectButton>. <br />
         Zwiedzając Delfy, byliśmy zachwyceni widokiem świątyni Apollina na tle gór, a sposób, w jaki
         te monumentalne budowle powstały, pozostaje dla nas zagadką. 🌄
       </Typography>

@@ -2,25 +2,25 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { ButtonTypeMap, useTheme } from '@mui/material';
 import { ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PlaceLabel } from 'src/pages/Home/data';
+import { PlaceLabel } from 'src/pages/Trips/trips-data';
 import { AppRoutes } from 'src/router/app-routes';
 import { Button, ButtonProps } from 'src/ui-components';
 
 export const DialogRedirectButton = ({
-  place,
+  miejsce,
   children,
 }: {
-  place: PlaceLabel;
+  miejsce: PlaceLabel;
   children: ReactNode;
 }) => {
   const theme = useTheme();
   const navigate = useNavigate();
-  const to = AppRoutes.Home({ place });
+  const to = AppRoutes.Trips({ miejsce });
 
   const handleClick = (event: React.MouseEvent) => {
     event.preventDefault();
 
-    navigate(AppRoutes.Home());
+    navigate(AppRoutes.Trips());
     setTimeout(() => {
       navigate(to);
     }, theme.transitions.duration.enteringScreen);

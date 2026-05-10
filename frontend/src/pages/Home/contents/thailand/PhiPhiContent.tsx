@@ -1,4 +1,4 @@
-import { ImagesSet } from 'src/pages/Home/ImagesSet';
+import { ImagesSet } from 'src/pages/Trips/ImagesSet';
 import { Typography } from 'src/ui-components';
 
 export type PhiPhiContentProps = {};

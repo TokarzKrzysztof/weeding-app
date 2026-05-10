@@ -1,5 +1,5 @@
 import { DialogRedirectButton } from 'src/components/RedirectButton';
-import { ImagesSet } from 'src/pages/Home/ImagesSet';
+import { ImagesSet } from 'src/pages/Trips/ImagesSet';
 import { Typography } from 'src/ui-components';
 
 export const AthensContent = () => {
@@ -22,7 +22,7 @@ export const AthensContent = () => {
         Byliśmy tam razem z rodzicami Krzyśka i jego siostrą, a decyzja o wyjeździe była bardzo
         spontaniczna - po prostu trafiliśmy na dobrą okazję.
         <br /> Zwiedziliśmy Akropol i najważniejsze miejsca w stolicy, a także wybraliśmy się do
-        oddalonych o około 2 godziny drogi od Aten <DialogRedirectButton place='Delfy / Arachova'>Delf</DialogRedirectButton>. Na miejscu wypożyczyliśmy samochód - jazda
+        oddalonych o około 2 godziny drogi od Aten <DialogRedirectButton miejsce='Delfy / Arachova'>Delf</DialogRedirectButton>. Na miejscu wypożyczyliśmy samochód - jazda
         po Atenach bywała momentami dość chaotyczna, ale ostatecznie daliśmy radę! 🚗
         <br />
         <br />

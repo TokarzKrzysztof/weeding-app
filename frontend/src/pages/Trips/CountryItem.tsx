@@ -1,8 +1,8 @@
 import { Collapse, Slide, useTheme } from '@mui/material';
 import { atom, useAtom } from 'jotai';
 import { useEffect, useState } from 'react';
-import { Country } from 'src/pages/Home/data';
-import { TripItem } from 'src/pages/Home/TripItem';
+import { TripItem } from 'src/pages/Trips/TripItem';
+import { Country } from 'src/pages/Trips/trips-data';
 import { Box, buildImgSrc, Stack, Typography } from 'src/ui-components';
 
 const selectedCountryItemAtom = atom<Country | null>(null);

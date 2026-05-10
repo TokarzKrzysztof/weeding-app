@@ -1,11 +1,11 @@
 import _ from 'lodash';
-import { PlaceLabel } from 'src/pages/Home/data';
+import { PlaceLabel } from 'src/pages/Trips/trips-data';
 
 export const privateChatUrl = '/my-chats/private-chat';
 export const groupChatUrl = '/my-chats/group-chat';
 
 export const AppRoutes = {
-  Home: (params?: HomeParams) => makeUrl('/', params),
+  Home: () => '/',
   // Contact: () => '/contact',
   // AboutMe: () => '/about-me',
   // Offer: (params?: UseScrollParams) => makeUrl('/offer', params),
@@ -17,6 +17,8 @@ export const AppRoutes = {
   // PortfolioFood: (params?: UseScrollParams) => makeUrl('/portfolio/food', params),
   // PortfolioReportage: (params?: UseScrollParams) => makeUrl('/portfolio/reportage', params),
   Admin: () => '/admin',
+  Menu: () => '/menu',
+  Trips: (params?: TripsParams) => makeUrl('/nasze-podroze', params),
 } as const;
 
 const makeUrl = (url: string, params?: Record<string, unknown>) => {
@@ -32,6 +34,6 @@ const makeUrl = (url: string, params?: Record<string, unknown>) => {
   return `${url}?${query}`;
 };
 
-export type HomeParams = {
-  place?: PlaceLabel
-}
+export type TripsParams = {
+  miejsce?: PlaceLabel;
+};

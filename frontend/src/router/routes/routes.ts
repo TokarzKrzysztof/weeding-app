@@ -3,11 +3,19 @@ import { AppRoutes } from 'src/router/app-routes';
 import { emptyLoader, localLoader } from 'src/router/loaders';
 
 export const routes: RouteObject[] = [
+  // {
+  //   index: true,
+  //   lazy: async () => {
+  //     const { Home } = await import('../../pages/Home/Home');
+  //     return { Component: Home };
+  //   },
+  //   loader: emptyLoader,
+  // },
   {
-    index: true,
+    path: AppRoutes.Trips(),
     lazy: async () => {
-      const { Home } = await import('../../pages/Home/Home');
-      return { Component: Home };
+      const { Trips } = await import('../../pages/Trips/Trips');
+      return { Component: Trips };
     },
     loader: emptyLoader,
   },
