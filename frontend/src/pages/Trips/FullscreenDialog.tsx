@@ -2,10 +2,10 @@ import CloseIcon from '@mui/icons-material/Close';
 import _ from 'lodash';
 import { TransitionProps } from 'notistack';
 import { forwardRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useRouteParams } from 'src/hooks/useRouteParams';
 import { Place, PlaceLabel, TRIPS_DATA } from 'src/pages/Trips/trips-data';
-import { AppRoutes, TripsParams } from 'src/router/app-routes';
+import { TripsParams } from 'src/router/app-routes';
 import {
   buildImgSrc,
   Dialog,
@@ -13,7 +13,7 @@ import {
   IconButton,
   Slide,
   Stack,
-  Typography
+  Typography,
 } from 'src/ui-components';
 
 const Transition = forwardRef(function Transition(
@@ -22,13 +22,14 @@ const Transition = forwardRef(function Transition(
   },
   ref: React.Ref<unknown>,
 ) {
-  return <Slide direction='up' ref={ref} {...props} />;
+  return <Slide direction='up' ref={ref} {...props} timeout={400} />;
 });
 
 export type FullscreenDialogProps = {};
 
 export const FullscreenDialog = ({ ...props }: FullscreenDialogProps) => {
   const [params] = useRouteParams<TripsParams>();
+  const navigate = useNavigate();
 
   const getPlace = (label: PlaceLabel) => {
     const flatten = _.flattenDeep(TRIPS_DATA.map((x) => x.places)) as Place[];
@@ -37,7 +38,7 @@ export const FullscreenDialog = ({ ...props }: FullscreenDialogProps) => {
 
   const dialogData = params.miejsce ? getPlace(params.miejsce) : null;
   return (
-    <Dialog open={!!params.miejsce} fullScreen TransitionComponent={Transition} {...props}>
+    <Dialog open={!!params.miejsce} fullScreen TransitionComponent={Transition}>
       <Stack sx={{ p: 1, pl: 2, background: '#fff1f7', justifyContent: 'space-between' }}>
         <Stack sx={{ alignItems: 'center' }}>
           <img
@@ -47,7 +48,7 @@ export const FullscreenDialog = ({ ...props }: FullscreenDialogProps) => {
           />
           <Typography sx={{ ml: 1 }}>{dialogData?.label}</Typography>
         </Stack>
-        <IconButton component={Link} to={AppRoutes.Trips()}>
+        <IconButton onClick={() => navigate(-1)}>
           <CloseIcon />
         </IconButton>
       </Stack>

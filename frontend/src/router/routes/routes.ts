@@ -20,6 +20,14 @@ export const routes: RouteObject[] = [
     loader: emptyLoader,
   },
   {
+    path: AppRoutes.Menu(),
+    lazy: async () => {
+      const { Menu } = await import('../../pages/Menu/Menu');
+      return { Component: Menu };
+    },
+    loader: emptyLoader,
+  },
+  {
     path: AppRoutes.Admin(),
     lazy: async () => {
       const { Admin } = await import('../../pages/Admin/Admin');

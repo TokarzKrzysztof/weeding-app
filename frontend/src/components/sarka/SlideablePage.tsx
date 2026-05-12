@@ -6,9 +6,9 @@ import { Box, Button, Icon } from 'src/ui-components';
 export type SlideablePageProps = {
   rootContent: ReactNode;
   rootUrl: string;
-  rootName: string;
+  pageName: string;
 };
-export const SlideablePage = ({ rootContent, rootUrl, rootName }: SlideablePageProps) => {
+export const SlideablePage = ({ rootContent, rootUrl, pageName }: SlideablePageProps) => {
   const scrollableRef = useRef<HTMLDivElement>(null);
   const theme = useTheme();
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +23,7 @@ export const SlideablePage = ({ rootContent, rootUrl, rootName }: SlideablePageP
 
   const isRoot = location.pathname === rootUrl.split('?')[0];
   return (
-    <Box sx={{ overflow: 'hidden', width: '100%', position: 'relative', minHeight: '100vh' }}>
+    <Box sx={{ textAlign: 'center', overflow: 'hidden', width: '100%', position: 'relative', minHeight: '100vh' }}>
       <Box sx={{ transform: isRoot ? undefined : `translateX(-100%)`, transition: '500ms' }}>
         {rootContent}
       </Box>
@@ -47,6 +47,7 @@ export const SlideablePage = ({ rootContent, rootUrl, rootName }: SlideablePageP
             boxShadow: scrolled ? `0 0 12px 0 ${theme.palette.grey[400]}` : 0,
             transition: '200ms',
             zIndex: 1,
+            textAlign: 'left'
           }}
         >
           <Button
@@ -56,7 +57,7 @@ export const SlideablePage = ({ rootContent, rootUrl, rootName }: SlideablePageP
             to={rootUrl}
             disableRipple
           >
-            {rootName}
+            {pageName}
           </Button>
         </Box>
         <Box ref={scrollableRef} sx={{ flexGrow: 1, overflow: 'auto' }}>
