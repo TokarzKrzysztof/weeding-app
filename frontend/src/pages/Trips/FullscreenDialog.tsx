@@ -47,7 +47,7 @@ export const FullscreenDialog = ({ ...props }: FullscreenDialogProps) => {
           />
           <Typography sx={{ ml: 1 }}>{dialogData?.label}</Typography>
         </Stack>
-        <IconButton component={Link} to={AppRoutes.Home()}>
+        <IconButton component={Link} to={AppRoutes.Trips()}>
           <CloseIcon />
         </IconButton>
       </Stack>

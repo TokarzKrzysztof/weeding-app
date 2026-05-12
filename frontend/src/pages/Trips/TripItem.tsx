@@ -1,25 +1,13 @@
 import FlightIcon from '@mui/icons-material/Flight';
-import { TransitionProps } from '@mui/material/transitions';
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Place } from 'src/pages/Trips/trips-data';
 import { AppRoutes } from 'src/router/app-routes';
-import { Box, buildImgSrc, IconButton, Slide, Stack, Typography } from 'src/ui-components';
-
-const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children: React.ReactElement<unknown>;
-  },
-  ref: React.Ref<unknown>,
-) {
-  return <Slide direction='up' ref={ref} {...props} />;
-});
+import { Box, buildImgSrc, IconButton, Stack, Typography } from 'src/ui-components';
 
 export type TripItemProps = {
   data: Place;
 };
 export const TripItem = ({ data }: TripItemProps) => {
-
   return (
     <>
       <Box
