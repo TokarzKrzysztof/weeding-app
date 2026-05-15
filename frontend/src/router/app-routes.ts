@@ -19,6 +19,7 @@ export const AppRoutes = {
   Admin: () => '/admin',
   Menu: () => '/menu',
   Trips: (params?: TripsParams) => makeUrl('/nasze-podroze', params),
+  OurStory: () => '/nasza-historia',
 } as const;
 
 const makeUrl = (url: string, params?: Record<string, unknown>) => {

@@ -1,3 +1,4 @@
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import { Fade, GlobalStyles } from '@mui/material';
@@ -17,6 +18,7 @@ function App() {
   const listItems = [
     { label: 'Menu weselne', to: AppRoutes.Menu(), icon: <RestaurantIcon /> },
     { label: 'Nasze podróże', to: AppRoutes.Trips(), icon: <FlightTakeoffIcon /> },
+    { label: 'Nasza historia', to: AppRoutes.OurStory(), icon: <FavoriteIcon /> },
   ];
 
   const mainContent = (
