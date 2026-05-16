@@ -5,7 +5,7 @@ import { Box, Button, Icon } from 'src/ui-components';
 
 export const slideableBackButtonHeight = 44;
 
-const isDirectChild = (parentPathname: string, childPathname: string) => {
+const checkIsDirectChild = (parentPathname: string, childPathname: string) => {
   const parentCount = parentPathname === '/' ? 1 : parentPathname.split('/').length;
   return childPathname.split('/').length - parentCount === 1;
 };
@@ -28,8 +28,14 @@ export const SlideablePage = ({ rootContent, rootUrl, pageName }: SlideablePageP
     });
   }, []);
 
+  useEffect(() => {
+    scrollableRef.current?.scroll({ top: 0 });
+    window.scroll({ top: 0 });
+  }, [pageName]);
+
   const isRoot = location.pathname === rootUrl.split('?')[0];
-  const showBackButton = isDirectChild(rootUrl, location.pathname);
+  const isDirectChild = checkIsDirectChild(rootUrl, location.pathname);
+
   return (
     <Box
       sx={{
@@ -56,7 +62,7 @@ export const SlideablePage = ({ rootContent, rootUrl, pageName }: SlideablePageP
           transition: '500ms',
         }}
       >
-        {showBackButton && (
+        {isDirectChild && (
           <Box
             sx={{
               pl: 1,
@@ -67,7 +73,7 @@ export const SlideablePage = ({ rootContent, rootUrl, pageName }: SlideablePageP
               height: slideableBackButtonHeight,
               flexShrink: 0,
               display: 'flex',
-              alignItems: 'center'
+              alignItems: 'center',
             }}
           >
             <Button
