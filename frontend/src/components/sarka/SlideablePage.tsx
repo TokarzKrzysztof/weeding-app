@@ -35,7 +35,7 @@ export const SlideablePage = ({ rootContent, rootUrl, pageName }: SlideablePageP
 
   const isRoot = location.pathname === rootUrl.split('?')[0];
   const isDirectChild = checkIsDirectChild(rootUrl, location.pathname);
-
+  
   return (
     <Box
       sx={{
@@ -88,7 +88,7 @@ export const SlideablePage = ({ rootContent, rootUrl, pageName }: SlideablePageP
           </Box>
         )}
 
-        <Box ref={scrollableRef} sx={{ flexGrow: 1, overflow: 'auto' }}>
+        <Box ref={scrollableRef} sx={{ flexGrow: 1, overflow: isDirectChild ? 'auto' : undefined }}>
           <Outlet />
         </Box>
       </Box>
