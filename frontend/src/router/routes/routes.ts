@@ -20,20 +20,54 @@ export const routes: RouteObject[] = [
     loader: emptyLoader,
   },
   {
-    path: AppRoutes.Menu(),
+    path: AppRoutes.Newspaper(),
     lazy: async () => {
-      const { Menu } = await import('../../pages/Menu/Menu');
-      return { Component: Menu };
+      const { Newspaper } = await import('../../pages/Newspaper/Newspaper');
+      return { Component: Newspaper };
     },
     loader: emptyLoader,
-  },
-  {
-    path: AppRoutes.OurStory(),
-    lazy: async () => {
-      const { OurStory } = await import('../../pages/OurStory/OurStory');
-      return { Component: OurStory };
-    },
-    loader: emptyLoader,
+    children: [
+      {
+        path: AppRoutes.NewspaperHoroscope(),
+        lazy: async () => {
+          const { Horoscope } = await import('../../pages/Newspaper/subpages/Horoscope');
+          return { Component: Horoscope };
+        },
+        loader: emptyLoader,
+      },
+      {
+        path: AppRoutes.NewspaperMenu(),
+        lazy: async () => {
+          const { Menu } = await import('../../pages/Newspaper/subpages/Menu');
+          return { Component: Menu };
+        },
+        loader: emptyLoader,
+      },
+      {
+        path: AppRoutes.NewspaperOurStory(),
+        lazy: async () => {
+          const { OurStory } = await import('../../pages/Newspaper/subpages/OurStory');
+          return { Component: OurStory };
+        },
+        loader: emptyLoader,
+      },
+      {
+        path: AppRoutes.NewspaperRegulations(),
+        lazy: async () => {
+          const { Regulations } = await import('../../pages/Newspaper/subpages/Regulations');
+          return { Component: Regulations };
+        },
+        loader: emptyLoader,
+      },
+      {
+        path: AppRoutes.NewspaperService(),
+        lazy: async () => {
+          const { Service } = await import('../../pages/Newspaper/subpages/Service');
+          return { Component: Service };
+        },
+        loader: emptyLoader,
+      },
+    ],
   },
   {
     path: AppRoutes.Admin(),

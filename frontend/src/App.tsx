@@ -1,6 +1,5 @@
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import ArticleIcon from '@mui/icons-material/Article';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
-import RestaurantIcon from '@mui/icons-material/Restaurant';
 import { Fade, GlobalStyles } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { ErrorBoundary } from 'react-error-boundary';
@@ -16,9 +15,8 @@ function App() {
   const location = useLocation();
 
   const listItems = [
-    { label: 'Menu weselne', to: AppRoutes.Menu(), icon: <RestaurantIcon /> },
     { label: 'Nasze podróże', to: AppRoutes.Trips(), icon: <FlightTakeoffIcon /> },
-    { label: 'Nasza historia', to: AppRoutes.OurStory(), icon: <FavoriteIcon /> },
+    { label: 'Gazetka weselna', to: AppRoutes.Newspaper(), icon: <ArticleIcon /> },
   ];
 
   const mainContent = (

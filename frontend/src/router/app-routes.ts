@@ -17,9 +17,13 @@ export const AppRoutes = {
   // PortfolioFood: (params?: UseScrollParams) => makeUrl('/portfolio/food', params),
   // PortfolioReportage: (params?: UseScrollParams) => makeUrl('/portfolio/reportage', params),
   Admin: () => '/admin',
-  Menu: () => '/menu',
   Trips: (params?: TripsParams) => makeUrl('/nasze-podroze', params),
-  OurStory: () => '/nasza-historia',
+  Newspaper: () => '/gazetka',
+  NewspaperMenu: () => '/gazetka/menu',
+  NewspaperOurStory: () => '/gazetka/nasza-historia',
+  NewspaperService: () => '/gazetka/uslugodawcy',
+  NewspaperRegulations: () => '/gazetka/regulamin',
+  NewspaperHoroscope: () => '/gazetka/horoskop',
 } as const;
 
 const makeUrl = (url: string, params?: Record<string, unknown>) => {
