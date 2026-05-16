@@ -5,7 +5,7 @@ import RestaurantIcon from '@mui/icons-material/Restaurant';
 import StarIcon from '@mui/icons-material/Star';
 import { useTheme } from '@mui/material';
 import { useLocation } from 'react-router-dom';
-import { SlideablePage } from 'src/components/sarka/SlideablePage';
+import { slideableBackButtonHeight, SlideablePage } from 'src/components/sarka/SlideablePage';
 import { HomeItem } from 'src/pages/Home/HomeItem';
 import { AppRoutes } from 'src/router/app-routes';
 import { Container, Typography } from 'src/ui-components';
@@ -22,8 +22,9 @@ export const Newspaper = () => {
     { label: 'Horoskop weselny', to: AppRoutes.NewspaperHoroscope(), icon: <StarIcon /> },
   ];
 
+  const isRoot = location.pathname === AppRoutes.Newspaper();
   const mainContent = (
-    <Container>
+    <Container sx={{ mt: isRoot ? 0 : `${slideableBackButtonHeight}px` }}>
       <Typography variant='h2' sx={{ fontSize: 20, fontWeight: 'bold', mb: 2, mt: 2 }}>
         Droga rodzino i przyjaciele 💞
       </Typography>

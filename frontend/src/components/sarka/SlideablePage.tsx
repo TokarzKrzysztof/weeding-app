@@ -3,6 +3,13 @@ import { ReactNode, useEffect, useRef, useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Box, Button, Icon } from 'src/ui-components';
 
+export const slideableBackButtonHeight = 44;
+
+const isDirectChild = (parentPathname: string, childPathname: string) => {
+  const parentCount = parentPathname === '/' ? 1 : parentPathname.split('/').length;
+  return childPathname.split('/').length - parentCount === 1;
+};
+
 export type SlideablePageProps = {
   rootContent: ReactNode;
   rootUrl: string;
@@ -22,8 +29,17 @@ export const SlideablePage = ({ rootContent, rootUrl, pageName }: SlideablePageP
   }, []);
 
   const isRoot = location.pathname === rootUrl.split('?')[0];
+  const showBackButton = isDirectChild(rootUrl, location.pathname);
   return (
-    <Box sx={{ textAlign: 'center', overflow: 'hidden', width: '100%', position: 'relative', minHeight: '100vh' }}>
+    <Box
+      sx={{
+        textAlign: 'center',
+        overflow: 'hidden',
+        width: '100%',
+        position: 'relative',
+        minHeight: '100vh',
+      }}
+    >
       <Box sx={{ transform: isRoot ? undefined : `translateX(-100%)`, transition: '500ms' }}>
         {rootContent}
       </Box>
@@ -40,26 +56,32 @@ export const SlideablePage = ({ rootContent, rootUrl, pageName }: SlideablePageP
           transition: '500ms',
         }}
       >
-        <Box
-          sx={{
-            pl: 1,
-            pb: 0,
-            boxShadow: scrolled ? `0 0 12px 0 ${theme.palette.grey[400]}` : 0,
-            transition: '200ms',
-            zIndex: 1,
-            textAlign: 'left'
-          }}
-        >
-          <Button
-            variant='text'
-            startIcon={<Icon name='keyboard_arrow_left' />}
-            component={Link}
-            to={rootUrl}
-            disableRipple
+        {showBackButton && (
+          <Box
+            sx={{
+              pl: 1,
+              boxShadow: scrolled ? `0 0 12px 0 ${theme.palette.grey[400]}` : 0,
+              transition: '200ms',
+              zIndex: 1,
+              textAlign: 'left',
+              height: slideableBackButtonHeight,
+              flexShrink: 0,
+              display: 'flex',
+              alignItems: 'center'
+            }}
           >
-            {pageName}
-          </Button>
-        </Box>
+            <Button
+              variant='text'
+              startIcon={<Icon name='keyboard_arrow_left' />}
+              component={Link}
+              to={rootUrl}
+              disableRipple
+            >
+              {pageName}
+            </Button>
+          </Box>
+        )}
+
         <Box ref={scrollableRef} sx={{ flexGrow: 1, overflow: 'auto' }}>
           <Outlet />
         </Box>
