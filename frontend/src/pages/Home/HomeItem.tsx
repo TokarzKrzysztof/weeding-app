@@ -25,6 +25,7 @@ export const HomeItem = ({ label, to, iconStart }: HomeItemProps) => {
       }}
       component={Link}
       to={to}
+      // onClick={() => window.scroll({top: 0})}
     >
       <Stack sx={{ alignItems: 'center' }}>
         {iconStart}
