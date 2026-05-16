@@ -28,14 +28,8 @@ export const SlideablePage = ({ rootContent, rootUrl, pageName }: SlideablePageP
     });
   }, []);
 
-  useEffect(() => {
-    scrollableRef.current?.scroll({ top: 0 });
-    window.scroll({ top: 0 });
-  }, [pageName]);
-
   const isRoot = location.pathname === rootUrl.split('?')[0];
   const isDirectChild = checkIsDirectChild(rootUrl, location.pathname);
-  
   return (
     <Box
       sx={{
