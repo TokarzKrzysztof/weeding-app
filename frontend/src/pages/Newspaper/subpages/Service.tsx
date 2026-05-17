@@ -3,7 +3,7 @@ import { Box, Container, Typography } from 'src/ui-components';
 
 export const Service = () => {
   return (
-    <Subpage title='Usługodawcy'>
+    <Subpage>
       <Container sx={{ textAlign: 'left' }}>
         <Box sx={{ mt: 2 }}>
           <Typography sx={{ fontWeight: 'bold' }}>Bracia Zięba</Typography>

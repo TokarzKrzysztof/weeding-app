@@ -3,7 +3,7 @@ import { Container } from 'src/ui-components';
 
 export const OurStory = () => {
   return (
-    <Subpage title={'Nasza historia'}>
+    <Subpage>
       <Container></Container>
     </Subpage>
   );

@@ -3,7 +3,7 @@ import { Container } from 'src/ui-components';
 
 export const Horoscope = () => {
   return (
-    <Subpage title={'Horoskop weselny'}>
+    <Subpage>
       <Container></Container>
     </Subpage>
   );

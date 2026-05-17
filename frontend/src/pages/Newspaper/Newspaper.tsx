@@ -1,27 +1,15 @@
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import GavelIcon from '@mui/icons-material/Gavel';
-import GroupsIcon from '@mui/icons-material/Groups';
-import RestaurantIcon from '@mui/icons-material/Restaurant';
-import StarIcon from '@mui/icons-material/Star';
 import { useTheme } from '@mui/material';
 import { SlideablePage, Subpage } from 'src/components/sarka/SlideablePage';
 import { HomeItem } from 'src/pages/Home/HomeItem';
+import { listItems } from 'src/pages/Home/list-items';
 import { AppRoutes } from 'src/router/app-routes';
 import { Container, Typography } from 'src/ui-components';
 
 export const Newspaper = () => {
   const theme = useTheme();
 
-  const listItems = [
-    { label: 'Nasza historia', to: AppRoutes.NewspaperOurStory(), icon: <FavoriteIcon /> },
-    { label: 'Menu weselne', to: AppRoutes.NewspaperMenu(), icon: <RestaurantIcon /> },
-    { label: 'Regulamin wesela', to: AppRoutes.NewspaperRegulations(), icon: <GavelIcon /> },
-    { label: 'Usługodawcy', to: AppRoutes.NewspaperService(), icon: <GroupsIcon /> },
-    { label: 'Horoskop weselny', to: AppRoutes.NewspaperHoroscope(), icon: <StarIcon /> },
-  ];
-
   const mainContent = (
-    <Subpage title='Gazetka weselna'>
+    <Subpage>
       <Container>
         <Typography variant='h2' sx={{ fontSize: 20, fontWeight: 'bold', mb: 2, mt: 2 }}>
           Droga rodzino i przyjaciele 💞
@@ -34,7 +22,7 @@ export const Newspaper = () => {
           przed nami. <br /> Z wdzięcznością i miłością, <br />
           <b style={{ fontStyle: 'italic', color: theme.palette.primary.main }}>Młoda para</b>
         </Typography>
-        {listItems.map((x) => (
+        {listItems.newspaper.map((x) => (
           <HomeItem key={x.label} label={x.label} to={x.to} iconStart={x.icon}></HomeItem>
         ))}
       </Container>

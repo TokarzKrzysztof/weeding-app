@@ -1,5 +1,3 @@
-import ArticleIcon from '@mui/icons-material/Article';
-import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import LocalSeeIcon from '@mui/icons-material/LocalSee';
 import { Fade, GlobalStyles } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -7,16 +5,12 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { ErrorFallback } from 'src/components/ErrorFallback';
 import { SlideablePage } from 'src/components/sarka/SlideablePage';
 import { HomeItem } from 'src/pages/Home/HomeItem';
+import { listItems } from 'src/pages/Home/list-items';
 import { AppRoutes } from 'src/router/app-routes';
 import { Box, buildImgSrc, Container, Typography } from 'src/ui-components';
 
 function App() {
   const theme = useTheme();
-
-  const listItems = [
-    { label: 'Nasze podróże', to: AppRoutes.Trips(), icon: <FlightTakeoffIcon /> },
-    { label: 'Gazetka weselna', to: AppRoutes.Newspaper(), icon: <ArticleIcon /> },
-  ];
 
   const mainContent = (
     <Container>
@@ -27,7 +21,7 @@ function App() {
             Witamy na naszym weselu! 💒
           </Typography>
 
-          {listItems.map((x) => (
+          {listItems.app.map((x) => (
             <HomeItem key={x.label} label={x.label} to={x.to} iconStart={x.icon}></HomeItem>
           ))}
 
@@ -50,7 +44,7 @@ function App() {
                 fontSize: 36,
                 transform: 'rotate(-20deg) translateX(10px)',
                 left: 0,
-                position: 'absolute'
+                position: 'absolute',
               }}
             />
             Ważna informacja!
@@ -76,10 +70,7 @@ function App() {
           },
         }}
       />
-      <SlideablePage
-        rootContent={mainContent}
-        rootUrl={AppRoutes.Home()}
-      />
+      <SlideablePage rootContent={mainContent} rootUrl={AppRoutes.Home()} />
     </ErrorBoundary>
   );
 }

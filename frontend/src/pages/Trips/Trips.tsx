@@ -6,7 +6,7 @@ import { Container, Typography } from 'src/ui-components';
 
 export const Trips = () => {
   return (
-    <Subpage title='Nasze podróże'>
+    <Subpage>
       <Container>
         <Typography mb={5}>
           Poznaj miejsca, które razem odwiedziliśmy. Każda podróż to dla nas wspomnienia, przygody i

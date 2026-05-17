@@ -3,7 +3,7 @@ import { Container } from 'src/ui-components';
 
 export const Menu = () => {
   return (
-    <Subpage title={'Menu weselne'}>
+    <Subpage>
       <Container></Container>
     </Subpage>
   );

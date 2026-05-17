@@ -3,7 +3,7 @@ import { Box, Container, Typography } from 'src/ui-components';
 
 export const Regulations = () => {
   return (
-    <Subpage title='Regulamin wesela'>
+    <Subpage>
       <Container sx={{ textAlign: 'left' }}>
         <Box sx={{ mt: 2 }}>
           <Typography sx={{ fontWeight: 'bold' }}>1. Tańczysz, nawet jeśli nie umiesz.</Typography>

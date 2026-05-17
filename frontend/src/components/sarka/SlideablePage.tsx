@@ -1,6 +1,7 @@
 import { useTheme } from '@mui/material';
-import { ReactNode, useEffect, useRef, useState } from 'react';
+import { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { listItems } from 'src/pages/Home/list-items';
 import { Box, Button, Icon } from 'src/ui-components';
 
 export type SlideablePageProps = {
@@ -68,12 +69,13 @@ export const SlideablePage = ({ rootContent, rootUrl, isSubpage }: SlideablePage
   );
 };
 
-export const Subpage = ({ title, children }: { title: string; children: ReactNode }) => {
+export const Subpage = ({ children }: { children: ReactNode }) => {
   const scrollableRef = useRef<HTMLDivElement>(null);
   const [scrolled, setScrolled] = useState(false);
 
   const theme = useTheme();
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handler = () => {
@@ -82,9 +84,14 @@ export const Subpage = ({ title, children }: { title: string; children: ReactNod
 
     scrollableRef.current?.addEventListener('scroll', handler);
     return () => {
-      scrollableRef.current?.removeEventListener('scroll', handler)
-    }
+      scrollableRef.current?.removeEventListener('scroll', handler);
+    };
   }, []);
+
+  const title = useMemo(() => {
+    const allItems = Object.values(listItems).flat();
+    return allItems.find((x) => x.to === location.pathname)?.label ?? 'Powrót';
+  }, [location.pathname]);
 
   return (
     <>
