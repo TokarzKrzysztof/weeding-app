@@ -4,7 +4,6 @@ import LocalSeeIcon from '@mui/icons-material/LocalSee';
 import { Fade, GlobalStyles } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { ErrorBoundary } from 'react-error-boundary';
-import { useLocation } from 'react-router-dom';
 import { ErrorFallback } from 'src/components/ErrorFallback';
 import { SlideablePage } from 'src/components/sarka/SlideablePage';
 import { HomeItem } from 'src/pages/Home/HomeItem';
@@ -13,7 +12,6 @@ import { Box, buildImgSrc, Container, Typography } from 'src/ui-components';
 
 function App() {
   const theme = useTheme();
-  const location = useLocation();
 
   const listItems = [
     { label: 'Nasze podróże', to: AppRoutes.Trips(), icon: <FlightTakeoffIcon /> },
@@ -68,7 +66,6 @@ function App() {
     </Container>
   );
 
-  const activeItem = listItems.find((x) => x.to === location.pathname);
   return (
     // ErrorBoundary and provider must be here
     <ErrorBoundary FallbackComponent={ErrorFallback}>
@@ -82,7 +79,6 @@ function App() {
       <SlideablePage
         rootContent={mainContent}
         rootUrl={AppRoutes.Home()}
-        pageName={activeItem?.label ?? ''}
       />
     </ErrorBoundary>
   );

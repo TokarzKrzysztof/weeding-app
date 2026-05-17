@@ -1,3 +1,4 @@
+import { Subpage } from 'src/components/sarka/SlideablePage';
 import { CountryItem } from 'src/pages/Trips/CountryItem';
 import { FullscreenDialog } from 'src/pages/Trips/FullscreenDialog';
 import { TRIPS_DATA } from 'src/pages/Trips/trips-data';
@@ -5,7 +6,7 @@ import { Container, Typography } from 'src/ui-components';
 
 export const Trips = () => {
   return (
-    <>
+    <Subpage title='Nasze podróże'>
       <Container>
         <Typography mb={5}>
           Poznaj miejsca, które razem odwiedziliśmy. Każda podróż to dla nas wspomnienia, przygody i
@@ -17,7 +18,7 @@ export const Trips = () => {
         ))}
       </Container>
       <FullscreenDialog />
-    </>
+    </Subpage>
   );
 };
 
