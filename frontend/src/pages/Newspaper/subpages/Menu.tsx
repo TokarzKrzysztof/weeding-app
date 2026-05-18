@@ -1,10 +1,23 @@
 import { Subpage } from 'src/components/sarka/SlideablePage';
-import { Container } from 'src/ui-components';
+import { Box, Container, Typography } from 'src/ui-components';
 
 export const Menu = () => {
   return (
     <Subpage>
-      <Container></Container>
+      <Container sx={{ textAlign: 'left' }}>
+        <Box sx={{ mt: 2 }}>
+          <Typography sx={{ fontWeight: 'bold' }}>Obiad</Typography>
+          <Typography>najlepsi w uchwyceniu najpiękniejszych chwil</Typography>
+        </Box>
+        <Box sx={{ mt: 5 }}>
+          <Typography sx={{ fontWeight: 'bold' }}>Zupa</Typography>
+          <Typography>najlepsi w uchwyceniu najpiękniejszych chwil</Typography>
+        </Box>
+        <Box sx={{ mt: 5 }}>
+          <Typography sx={{ fontWeight: 'bold' }}>Zupa</Typography>
+          <Typography>najlepsi w uchwyceniu najpiękniejszych chwil</Typography>
+        </Box>
+      </Container>
     </Subpage>
   );
 };
