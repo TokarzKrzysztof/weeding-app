@@ -1,4 +1,4 @@
-import { useTheme } from '@mui/material';
+import { SxProps, Theme, useTheme } from '@mui/material';
 import { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { listItems } from 'src/pages/Home/list-items';
@@ -8,8 +8,9 @@ export type SlideablePageProps = {
   rootContent: ReactNode;
   rootUrl: string;
   isSubpage?: boolean;
+  rootSx?: SxProps<Theme>;
 };
-export const SlideablePage = ({ rootContent, rootUrl, isSubpage }: SlideablePageProps) => {
+export const SlideablePage = ({ rootContent, rootUrl, isSubpage, rootSx }: SlideablePageProps) => {
   const location = useLocation();
 
   const isRoot = location.pathname === rootUrl.split('?')[0];

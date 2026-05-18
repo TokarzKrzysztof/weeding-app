@@ -20,7 +20,7 @@ export const TypographyInner = <
 
   return (
     <MuiTypography
-      sx={{ fontFamily: '"Nunito Sans", sans-serif', color: '#32383e', ...sx }}
+      sx={{ fontFamily: '"Nunito Sans", sans-serif', ...sx }}
       {...props}
       ref={ref}
     ></MuiTypography>

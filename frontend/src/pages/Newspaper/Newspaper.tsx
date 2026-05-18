@@ -3,14 +3,22 @@ import { SlideablePage, Subpage } from 'src/components/sarka/SlideablePage';
 import { HomeItem } from 'src/pages/Home/HomeItem';
 import { listItems } from 'src/pages/Home/list-items';
 import { AppRoutes } from 'src/router/app-routes';
-import { Container, Typography } from 'src/ui-components';
+import { buildImgSrc, Container, Typography } from 'src/ui-components';
 
 export const Newspaper = () => {
   const theme = useTheme();
 
   const mainContent = (
     <Subpage>
-      <Container>
+      <Container
+        sx={{
+          minHeight: '100vh',
+          backgroundImage: `linear-gradient(rgba(255,255,255, 0.7), rgba(255,255,255, 0.7)), url(${buildImgSrc('tła/gazetka.jpg')})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <Typography variant='h2' sx={{ fontSize: 20, fontWeight: 'bold', mb: 2, mt: 2 }}>
           Droga rodzino i przyjaciele 💞
         </Typography>

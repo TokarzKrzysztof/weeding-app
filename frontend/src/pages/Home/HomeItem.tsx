@@ -18,7 +18,7 @@ export const HomeItem = ({ label, to, iconStart }: HomeItemProps) => {
         minHeight: 80,
         pl: 2,
         alignItems: 'center',
-        borderBottom: `1px solid ${theme.palette.grey[300]}`,
+        borderBottom: `1px solid ${theme.palette.grey[500]}`,
         justifyContent: 'space-between',
         color: theme.palette.grey[800],
         textDecoration: 'none',

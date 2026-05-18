@@ -95,6 +95,17 @@ namespace Admin.Models
 
         public static List<Folder> FoldersTree = new List<Folder>()
         {
+            new Folder("tła")
+            {
+                Sections = [
+                    new ImagesSection("Wszystkie tła") {
+                        Images = [new Image("strona-glowna.jpg"), new Image("gazetka.jpg")],
+                        IsUnchanged = false,
+                        IsSortable = false,
+                        Orientation = ImageOrientation.Vertical,
+                    }
+                ]
+            },
             new Folder("logo")
             {
                 Sections = [
