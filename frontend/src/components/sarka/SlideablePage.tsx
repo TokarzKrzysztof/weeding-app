@@ -10,7 +10,12 @@ export type SlideablePageProps = {
   isSubpage?: boolean;
   childRootSx?: SxProps<Theme>;
 };
-export const SlideablePage = ({ rootContent, rootUrl, isSubpage, childRootSx }: SlideablePageProps) => {
+export const SlideablePage = ({
+  rootContent,
+  rootUrl,
+  isSubpage,
+  childRootSx,
+}: SlideablePageProps) => {
   const location = useLocation();
 
   const isRoot = location.pathname === rootUrl.split('?')[0];
@@ -43,7 +48,7 @@ export const SlideablePage = ({ rootContent, rootUrl, isSubpage, childRootSx }: 
             height: '100%',
             transform: isRoot ? undefined : `translateX(-100%)`,
             transition: '500ms',
-            ...childRootSx
+            ...childRootSx,
           }}
         >
           {rootContent}
@@ -63,10 +68,7 @@ export const SlideablePage = ({ rootContent, rootUrl, isSubpage, childRootSx }: 
         minHeight: '100vh',
       }}
     >
-      <Box
-        className={rootUrl}
-        sx={{ transform: isRoot ? undefined : `translateX(-100%)`, transition: '500ms' }}
-      >
+      <Box sx={{ transform: isRoot ? undefined : `translateX(-100%)`, transition: '500ms' }}>
         {rootContent}
       </Box>
       {outletOutput}
