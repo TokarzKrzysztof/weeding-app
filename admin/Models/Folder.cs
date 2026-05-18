@@ -99,10 +99,11 @@ namespace Admin.Models
             {
                 Sections = [
                     new ImagesSection("Wszystkie tła") {
-                        Images = [new Image("strona-glowna.jpg"), new Image("gazetka.jpg")],
+                        Images = [new Image("strona-glowna.jpg"), new Image("gazetka.jpg"), new Image("podroze.jpg")],
                         IsUnchanged = false,
                         IsSortable = false,
                         Orientation = ImageOrientation.Vertical,
+                        ImageSize = ImageSize.Large
                     }
                 ]
             },

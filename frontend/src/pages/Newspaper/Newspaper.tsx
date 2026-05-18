@@ -35,7 +35,7 @@ export const Newspaper = () => {
       rootContent={mainContent}
       rootUrl={AppRoutes.Newspaper()}
       childRootSx={{
-        backgroundImage: `linear-gradient(rgba(255,255,255, 0.7), rgba(255,255,255, 0.7)), url(${buildImgSrc('tła/gazetka.jpg')})`,
+        backgroundImage: `linear-gradient(rgba(255,255,255, 0.8), rgba(255,255,255, 0.8)), url(${buildImgSrc('tła/gazetka.jpg')})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',

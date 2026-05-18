@@ -42,7 +42,8 @@ export const CountryItem = ({ data, delay }: CountryItemProps) => {
             height: 80,
             borderRadius: 3,
             border: `1px solid ${theme.palette.grey[200]}`,
-            transition: '200ms'
+            background: 'rgba(255,255,255,0.5)',
+            transition: '200ms',
           }}
           onClick={toggleOpen}
         >
@@ -53,7 +54,7 @@ export const CountryItem = ({ data, delay }: CountryItemProps) => {
           <Box
             sx={{
               mt: 2,
-              background: theme.palette.grey[100],
+              background: 'rgba(200,200,200,0.5)',
               borderRadius: 3,
             }}
           >

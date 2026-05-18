@@ -20,6 +20,7 @@ export class PortfolioImgCount {
 export type ImagePath =
 | `tła/strona-glowna.jpg`
 | `tła/gazetka.jpg`
+| `tła/podroze.jpg`
 | `logo/logo.png`
 | `flagi/grecja.png`
 | `flagi/japonia.png`
