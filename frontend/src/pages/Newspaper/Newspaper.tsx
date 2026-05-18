@@ -10,15 +10,7 @@ export const Newspaper = () => {
 
   const mainContent = (
     <Subpage>
-      <Container
-        sx={{
-          minHeight: '100vh',
-          backgroundImage: `linear-gradient(rgba(255,255,255, 0.7), rgba(255,255,255, 0.7)), url(${buildImgSrc('tła/gazetka.jpg')})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      <Container>
         <Typography variant='h2' sx={{ fontSize: 20, fontWeight: 'bold', mb: 2, mt: 2 }}>
           Droga rodzino i przyjaciele 💞
         </Typography>
@@ -37,7 +29,19 @@ export const Newspaper = () => {
     </Subpage>
   );
 
-  return <SlideablePage isSubpage rootContent={mainContent} rootUrl={AppRoutes.Newspaper()} />;
+  return (
+    <SlideablePage
+      isSubpage
+      rootContent={mainContent}
+      rootUrl={AppRoutes.Newspaper()}
+      childRootSx={{
+        backgroundImage: `linear-gradient(rgba(255,255,255, 0.7), rgba(255,255,255, 0.7)), url(${buildImgSrc('tła/gazetka.jpg')})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    />
+  );
 };
 
 Newspaper.displayName = 'Newspaper';

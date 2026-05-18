@@ -8,9 +8,9 @@ export type SlideablePageProps = {
   rootContent: ReactNode;
   rootUrl: string;
   isSubpage?: boolean;
-  rootSx?: SxProps<Theme>;
+  childRootSx?: SxProps<Theme>;
 };
-export const SlideablePage = ({ rootContent, rootUrl, isSubpage, rootSx }: SlideablePageProps) => {
+export const SlideablePage = ({ rootContent, rootUrl, isSubpage, childRootSx }: SlideablePageProps) => {
   const location = useLocation();
 
   const isRoot = location.pathname === rootUrl.split('?')[0];
@@ -43,6 +43,7 @@ export const SlideablePage = ({ rootContent, rootUrl, isSubpage, rootSx }: Slide
             height: '100%',
             transform: isRoot ? undefined : `translateX(-100%)`,
             transition: '500ms',
+            ...childRootSx
           }}
         >
           {rootContent}
@@ -62,7 +63,10 @@ export const SlideablePage = ({ rootContent, rootUrl, isSubpage, rootSx }: Slide
         minHeight: '100vh',
       }}
     >
-      <Box sx={{ transform: isRoot ? undefined : `translateX(-100%)`, transition: '500ms' }}>
+      <Box
+        className={rootUrl}
+        sx={{ transform: isRoot ? undefined : `translateX(-100%)`, transition: '500ms' }}
+      >
         {rootContent}
       </Box>
       {outletOutput}

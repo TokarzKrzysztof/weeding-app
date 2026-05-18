@@ -16,7 +16,7 @@ const ContainerInner = <D extends React.ElementType = ContainerTypeMap['defaultC
   <MuiContainer
     ref={ref}
     sx={{
-      pb: 6,
+      pb: 2,
       pt: 2,
       ...sx,
     }}
