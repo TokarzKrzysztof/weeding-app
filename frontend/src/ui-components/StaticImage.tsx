@@ -26,7 +26,7 @@ const alts = [
 export type ImageName = (typeof alts)[number][0];
 
 export type StaticImageProps = {
-  name: ImageName;
+  name?: ImageName;
 } & Omit<BoxProps<'img'>, 'ref'>;
 
 export const StaticImage = ({ name, ...props }: StaticImageProps) => {

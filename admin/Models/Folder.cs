@@ -143,6 +143,47 @@ namespace Admin.Models
                     }
                 ]
             },
+            new Folder("nasza-historia")
+            {
+                Sections = [
+                    new ImagesSection("Pierwsze poziome") {
+                        Images = [new Image("1-1")],
+                        IsSortable = false,
+                        Orientation = ImageOrientation.Horizontal,
+                        Cols = Columns.Three,
+                    },
+                    new ImagesSection("Trzy pionowe") {
+                        Images = [new Image("2-1"), new Image("2-2"), new Image("2-3")],
+                        IsSortable = true,
+                        Orientation = ImageOrientation.Vertical,
+                        Cols = Columns.Three,
+                    },
+                    new ImagesSection("Kolejne poziome") {
+                        Images = [new Image("3-1")],
+                        IsSortable = false,
+                        Orientation = ImageOrientation.Horizontal,
+                        Cols = Columns.Three,
+                    },
+                    new ImagesSection("Kolejne pionowe") {
+                        Images = [new Image("4-1"), new Image("4-2")],
+                        IsSortable = true,
+                        Orientation = ImageOrientation.Vertical,
+                        Cols = Columns.Three,
+                    },
+                    new ImagesSection("Kolejne poziome") {
+                        Images = [new Image("5-1")],
+                        IsSortable = false,
+                        Orientation = ImageOrientation.Horizontal,
+                        Cols = Columns.Three,
+                    },
+                    new ImagesSection("Reszta zdjęć") {
+                        Images = [new Image("6-1"), new Image("6-2"), new Image("6-3"), new Image("6-4"),new Image("6-5")],
+                        IsSortable = true,
+                        Orientation = ImageOrientation.Unknown,
+                        Cols = Columns.Three,
+                    },
+                ]
+            },
             GenerateFolder("Czechy", ["Ardspach"]),
             GenerateFolder("Dania", ["Horsens"]),
             GenerateFolder("Grecja", ["Ateny", "Rodos", "Delfy", "Kreta", "Santorini", "Symi"]),
