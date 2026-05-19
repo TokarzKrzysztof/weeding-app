@@ -8,7 +8,7 @@ export const TokioContent = ({ ...props }: TokioContentProps) => {
   return (
     <>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['japonia/tokio-1-1', 'japonia/tokio-1-2', 'japonia/tokio-1-3']}
       />
       <Typography my={3}>
         Tokio to tętniąca życiem stolica Japonii, w której nowoczesne drapacze chmur łączą się z
@@ -18,7 +18,7 @@ export const TokioContent = ({ ...props }: TokioContentProps) => {
         🏙️
       </Typography>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['japonia/tokio-2-1', 'japonia/tokio-2-2', 'japonia/tokio-2-3']}
       />
       <Typography my={3}>
         Przylecieliśmy do Tokio dwa dni wcześniej, zanim dołączyliśmy do reszty grupy. Jednym z

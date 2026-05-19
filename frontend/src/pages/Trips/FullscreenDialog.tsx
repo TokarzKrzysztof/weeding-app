@@ -13,7 +13,7 @@ import {
   IconButton,
   Slide,
   Stack,
-  Typography,
+  Typography
 } from 'src/ui-components';
 
 const Transition = forwardRef(function Transition(
@@ -52,7 +52,7 @@ export const FullscreenDialog = ({ ...props }: FullscreenDialogProps) => {
           <CloseIcon />
         </IconButton>
       </Stack>
-      <DialogContent sx={{ textAlign: 'center' }}>{dialogData?.dialogContent}</DialogContent>
+      <DialogContent sx={{ textAlign: 'center', px: 2 }}>{dialogData?.dialogContent}</DialogContent>
     </Dialog>
   );
 };

@@ -7,7 +7,7 @@ export const KrabiContent = ({ ...props }: KrabiContentProps) => {
   return (
     <>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['tajlandia/krabi-1-1', 'tajlandia/krabi-1-2', 'tajlandia/krabi-1-3', 'tajlandia/krabi-1-4']}
       />
       <Typography my={3}>
         Ao Nang to popularna miejscowość turystyczna w prowincji Krabi w Tajlandii, znana z pięknych
@@ -16,7 +16,7 @@ export const KrabiContent = ({ ...props }: KrabiContentProps) => {
         tropikalną przyrodą, turkusową wodą i spektakularnymi krajobrazami. 🌴
       </Typography>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['tajlandia/krabi-2-1', 'tajlandia/krabi-2-2', 'tajlandia/krabi-2-3', 'tajlandia/krabi-2-4']}
       />
       <Typography my={3}>
         Ao Nang w Krabi było ostatnim punktem naszej podróży po Tajlandii i jednocześnie

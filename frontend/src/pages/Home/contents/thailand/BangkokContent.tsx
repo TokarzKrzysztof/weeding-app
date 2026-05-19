@@ -8,7 +8,7 @@ export const BangkokContent = ({ ...props }: BangkokContentProps) => {
   return (
     <>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['tajlandia/bangkok-1-1', 'tajlandia/bangkok-1-2', 'tajlandia/bangkok-1-3', 'tajlandia/bangkok-1-4']}
       />
       <Typography my={3}>
         Bangkok to tętniąca życiem stolica Tajlandii, pełna kontrastów i intensywnych wrażeń.
@@ -17,15 +17,15 @@ export const BangkokContent = ({ ...props }: BangkokContentProps) => {
       </Typography>
 
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['tajlandia/bangkok-2-1', 'tajlandia/bangkok-2-2', 'tajlandia/bangkok-2-3', 'tajlandia/bangkok-2-4']}
       />
       <Typography my={3}>
         Podczas naszej podróży po Tajlandii odwiedziliśmy nie tylko stolicę, ale także trzy wyspy:{' '}
         <DialogRedirectButton miejsce='Phuket'>Phuket</DialogRedirectButton>,{' '}
         <DialogRedirectButton miejsce='Krabi'>Krabi</DialogRedirectButton> oraz{' '}
-        <DialogRedirectButton miejsce='Phi Phi'>Phi Phi</DialogRedirectButton>. 🌴 <br /> Pierwsze zaskoczenie
-        pojawiło się już po wyjściu z lotniska - uderzył nas ogromny buch wilgotnego gorąca, jakby
-        ktoś otworzył drzwi do sauny. 🥵
+        <DialogRedirectButton miejsce='Phi Phi'>Phi Phi</DialogRedirectButton>. 🌴 <br /> Pierwsze
+        zaskoczenie pojawiło się już po wyjściu z lotniska - uderzył nas ogromny buch wilgotnego
+        gorąca, jakby ktoś otworzył drzwi do sauny. 🥵
         <br /> Bangkok zrobił na nas ogromne wrażenie swoją odmienną kulturą, bardzo niskimi cenami
         i… niesamowitym chaosem. Na słupach wisiało prawdziwe spaghetti z kabli, a korki potrafiły
         być praktycznie przez całą dobę.

@@ -8,7 +8,7 @@ export const SymiContent = ({ ...props }: SymiContentProps) => {
   return (
     <>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['grecja/symi-1-1', 'grecja/symi-1-2']}
       />
       <Typography my={3}>
         Symi to niewielka, malownicza wyspa w Grecji, położona niedaleko Rodos. Słynie z kolorowych
@@ -17,7 +17,7 @@ export const SymiContent = ({ ...props }: SymiContentProps) => {
         Panormitis - ważne miejsce pielgrzymkowe z piękną dzwonnicą i bogato zdobionym wnętrzem.
       </Typography>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['grecja/symi-2-1', 'grecja/symi-2-2']}
       />
       <Typography my={3}>
         Na Symi dopłynęliśmy podczas wycieczki zorganizowanej z{' '}

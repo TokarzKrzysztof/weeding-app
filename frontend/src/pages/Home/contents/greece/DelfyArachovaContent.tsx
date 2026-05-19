@@ -8,7 +8,7 @@ export const DelfyArachovaContent = ({ ...props }: DelfyArachovaContentProps) =>
   return (
     <>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['grecja/delfy-1-1', 'grecja/delfy-1-2', 'grecja/delfy-1-3']}
       />
       <Typography my={3}>
         Delfy to jedno z najważniejszych miejsc starożytnej Grecji, znane przede wszystkim jako
@@ -18,7 +18,7 @@ export const DelfyArachovaContent = ({ ...props }: DelfyArachovaContentProps) =>
         i lokalnych przysmaków, a zimą przyciąga również miłośników sportów zimowych. ⛰️
       </Typography>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['grecja/delfy-2-1', 'grecja/delfy-2-2']}
       />
       <Typography my={3}>
         Odwiedziliśmy Delfy jako część naszej wycieczki do{' '}

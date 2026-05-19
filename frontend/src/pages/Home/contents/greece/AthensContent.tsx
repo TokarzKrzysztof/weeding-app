@@ -5,9 +5,7 @@ import { Typography } from 'src/ui-components';
 export const AthensContent = () => {
   return (
     <>
-      <ImagesSet
-        images={['grecja/ateny-1-1', 'grecja/ateny-1-2', 'grecja/ateny-1-3']}
-      />
+      <ImagesSet images={['grecja/ateny-1-1', 'grecja/ateny-1-2', 'grecja/ateny-1-3']} />
       <Typography my={3}>
         Ateny to stolica Grecji i jedno z najstarszych miast świata. Uznawane są za kolebkę
         demokracji i ważne centrum starożytnej kultury. Nad miastem góruje Akropol Ateński z
@@ -16,14 +14,17 @@ export const AthensContent = () => {
       </Typography>
 
       <ImagesSet
+        firstHorizontal
         images={['grecja/ateny-2-1', 'grecja/ateny-2-2', 'grecja/ateny-2-3']}
       />
       <Typography my={3}>
         Byliśmy tam razem z rodzicami Krzyśka i jego siostrą, a decyzja o wyjeździe była bardzo
         spontaniczna - po prostu trafiliśmy na dobrą okazję.
         <br /> Zwiedziliśmy Akropol i najważniejsze miejsca w stolicy, a także wybraliśmy się do
-        oddalonych o około 2 godziny drogi od Aten <DialogRedirectButton miejsce='Delfy / Arachova'>Delf</DialogRedirectButton>. Na miejscu wypożyczyliśmy samochód - jazda
-        po Atenach bywała momentami dość chaotyczna, ale ostatecznie daliśmy radę! 🚗
+        oddalonych o około 2 godziny drogi od Aten{' '}
+        <DialogRedirectButton miejsce='Delfy / Arachova'>Delf</DialogRedirectButton>. Na miejscu
+        wypożyczyliśmy samochód - jazda po Atenach bywała momentami dość chaotyczna, ale ostatecznie
+        daliśmy radę! 🚗
         <br />
         <br />
         <b>Ciekawostka:</b> Nocowaliśmy w podobno najbardziej niebezpiecznej dzielnicy Aten, pełnej

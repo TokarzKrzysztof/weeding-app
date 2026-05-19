@@ -7,7 +7,7 @@ export const ArdspachContent = ({ ...props }: ArdspachContentProps) => {
   return (
     <>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['czechy/ardspach-1-1', 'czechy/ardspach-1-2', 'czechy/ardspach-1-3']}
       />
       <Typography my={3}>
         Adršpach to malownicza miejscowość w Czechach, znana przede wszystkim z niezwykłego Skalnego
@@ -17,7 +17,7 @@ export const ArdspachContent = ({ ...props }: ArdspachContentProps) => {
         części Europy. ⛰️
       </Typography>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['czechy/ardspach-2-1', 'czechy/ardspach-2-2', 'czechy/ardspach-2-3']}
       />
       <Typography my={3}>
         Do Adršpachu wybraliśmy się na rodzinny wyjazd. Spacer po Skalnym Mieście był niesamowitym

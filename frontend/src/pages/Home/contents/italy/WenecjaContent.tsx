@@ -7,7 +7,7 @@ export const WenecjaContent = ({ ...props }: WenecjaContentProps) => {
   return (
     <>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['włochy/wenecja-1-1', 'włochy/wenecja-1-2', 'włochy/wenecja-1-3', 'włochy/wenecja-1-4']}
       />
       <Typography my={3}>
         Wenecja to jedno z najbardziej wyjątkowych miast we Włoszech, zbudowane na ponad stu wyspach
@@ -16,7 +16,7 @@ export const WenecjaContent = ({ ...props }: WenecjaContentProps) => {
         niezwykłego klimatu, który od lat przyciąga turystów z całego świata. 🚤
       </Typography>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['włochy/wenecja-2-1', 'włochy/wenecja-2-2', 'włochy/wenecja-2-3']}
       />
       <Typography my={3}>
         Do Wenecji wybraliśmy się na krótki city break razem z naszym teamem z zumby. 💃 Była to

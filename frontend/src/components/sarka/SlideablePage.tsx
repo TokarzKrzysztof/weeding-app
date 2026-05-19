@@ -30,7 +30,7 @@ export const SlideablePage = ({
         width: '100%',
         height: '100vh',
         top: 0,
-        transform: isRoot ? undefined : `translateX(-100%)`,
+        transform: isRoot ? undefined : 'translateX(-100%)',
         transition: '500ms',
       }}
     >
@@ -46,7 +46,7 @@ export const SlideablePage = ({
             display: 'flex',
             flexDirection: 'column',
             height: '100%',
-            transform: isRoot ? undefined : `translateX(-100%)`,
+            transform: isRoot ? undefined : 'translateX(-100%)',
             transition: '500ms',
             ...childRootSx,
           }}
@@ -68,7 +68,7 @@ export const SlideablePage = ({
         minHeight: '100vh',
       }}
     >
-      <Box sx={{ transform: isRoot ? undefined : `translateX(-100%)`, transition: '500ms' }}>
+      <Box sx={{ transform: isRoot ? undefined : 'translateX(-100%)', transition: '500ms' }}>
         {rootContent}
       </Box>
       {outletOutput}

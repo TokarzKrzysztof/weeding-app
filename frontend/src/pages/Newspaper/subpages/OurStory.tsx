@@ -12,7 +12,7 @@ export const OurStory = () => {
         <Typography sx={{ fontWeight: 'bold', mt: 1 }}>27 luty , 16:59</Typography>
         <Typography sx={{ mt: 2 }}>
           <Typography
-            component={'span'}
+            component='span'
             sx={{ fontStyle: 'italic', color: theme.palette.grey[500] }}
           >
             „Cześć! Bardzo ładne torty pieczesz. Od dawna się tym zajmujesz?”

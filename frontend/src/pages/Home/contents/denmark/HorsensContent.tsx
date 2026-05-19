@@ -7,7 +7,7 @@ export const HorsensContent = ({ ...props }: HorsensContentProps) => {
   return (
     <>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['dania/horsens-1-1', 'dania/horsens-1-2', 'dania/horsens-1-3']}
       />
       <Typography my={3}>
         Adršpach to malownicza miejscowość w Czechach, znana przede wszystkim z niezwykłego Skalnego
@@ -17,7 +17,7 @@ export const HorsensContent = ({ ...props }: HorsensContentProps) => {
         części Europy. ⛰️
       </Typography>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['dania/horsens-2-1', 'dania/horsens-2-2', 'dania/horsens-2-3']}
       />
       <Typography my={3}>
         Do Horsens wybraliśmy się z okazji urodzin Krzyśka. 🎂 Spędzaliśmy tam czas z przyjaciółką

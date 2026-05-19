@@ -8,7 +8,7 @@ export const KretaContent = ({ ...props }: KretaContentProps) => {
   return (
     <>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['grecja/kreta-1-1', 'grecja/kreta-1-2', 'grecja/kreta-1-3']}
       />
       <Typography my={3}>
         Kreta to największa wyspa Grecji i jedno z najpopularniejszych miejsc wakacyjnych w basenie
@@ -19,7 +19,7 @@ export const KretaContent = ({ ...props }: KretaContentProps) => {
       </Typography>
 
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['grecja/kreta-2-1', 'grecja/kreta-2-2', 'grecja/kreta-2-3']}
       />
       <Typography my={3}>
         Kreta to nasz pierwszy wspólny wyjazd, który wspominamy bardzo ciepło. 💞 <br /> Na miejscu

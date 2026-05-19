@@ -7,7 +7,7 @@ export const PhuketContent = ({ ...props }: PhuketContentProps) => {
   return (
     <>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['tajlandia/phuket-1-1', 'tajlandia/phuket-1-2', 'tajlandia/phuket-1-3', 'tajlandia/phuket-1-4']}
       />
       <Typography my={3}>
         Phuket to największa wyspa Tajlandii i jedno z najpopularniejszych miejsc turystycznych w
@@ -16,7 +16,7 @@ export const PhuketContent = ({ ...props }: PhuketContentProps) => {
         zobaczyć słynną, imprezową stronę Tajlandii. 🌴
       </Typography>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['tajlandia/phuket-2-1', 'tajlandia/phuket-2-2', 'tajlandia/phuket-2-3']}
       />
       <Typography my={3}>
         Podczas pobytu na Phuket trafiliśmy do słynnej dzielnicy rozpusty, która w nocy zmienia

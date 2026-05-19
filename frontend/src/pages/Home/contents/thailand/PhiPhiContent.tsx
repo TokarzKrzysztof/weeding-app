@@ -7,7 +7,7 @@ export const PhiPhiContent = ({ ...props }: PhiPhiContentProps) => {
   return (
     <>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['tajlandia/phi-phi-1-1', 'tajlandia/phi-phi-1-2', 'tajlandia/phi-phi-1-3', 'tajlandia/phi-phi-1-4']}
       />
       <Typography my={3}>
         Phi Phi to niewielki archipelag wysp w Tajlandii, znany z turkusowej wody, wysokich
@@ -16,7 +16,7 @@ export const PhiPhiContent = ({ ...props }: PhiPhiContentProps) => {
         nocnego i luźnej, wakacyjnej atmosfery. 🌴
       </Typography>
       <ImagesSet
-        images={['miniaturki/ateny.jpg', 'miniaturki/ateny.jpg', 'miniaturki/ateny.jpg']}
+        images={['tajlandia/phi-phi-2-1', 'tajlandia/phi-phi-2-2', 'tajlandia/phi-phi-2-3', 'tajlandia/phi-phi-2-4']}
       />
       <Typography my={3}>
         Na Phi Phi od razu poczuliśmy wyjątkowy klimat - mimo że w powietrzu często unosił się
