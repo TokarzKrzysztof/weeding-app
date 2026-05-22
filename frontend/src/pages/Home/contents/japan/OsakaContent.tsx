@@ -7,7 +7,7 @@ export const OsakaContent = ({ ...props }: OsakaContentProps) => {
   return (
     <>
       <ImagesSet
-        images={['japonia/osaka-1-1', 'japonia/osaka-1-2', 'japonia/osaka-1-3']}
+        images={['japonia/osaka-1-1', 'japonia/osaka-1-2', 'japonia/osaka-1-3', 'japonia/osaka-1-4']}
       />
       <Typography my={3}>
         Osaka to jedno z największych miast Japonii, znane z nowoczesnej architektury, neonowych
@@ -16,7 +16,7 @@ export const OsakaContent = ({ ...props }: OsakaContentProps) => {
         jest często nazywana kulinarną stolicą Japonii. 🍜🏙️
       </Typography>
       <ImagesSet
-        images={['japonia/osaka-2-1', 'japonia/osaka-2-2', 'japonia/osaka-2-3']}
+        images={['japonia/osaka-2-1', 'japonia/osaka-2-2', 'japonia/osaka-2-3' , 'japonia/osaka-2-4']}
       />
       <Typography my={3}>
         Osaka była ostatnim punktem naszej podróży po Japonii. Spacerowaliśmy po tętniących życiem

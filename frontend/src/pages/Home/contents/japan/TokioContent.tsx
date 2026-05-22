@@ -8,7 +8,12 @@ export const TokioContent = ({ ...props }: TokioContentProps) => {
   return (
     <>
       <ImagesSet
-        images={['japonia/tokio-1-1', 'japonia/tokio-1-2', 'japonia/tokio-1-3']}
+        images={[
+          'japonia/tokio-1-1',
+          'japonia/tokio-1-2',
+          'japonia/tokio-1-3',
+          'japonia/tokio-1-4',
+        ]}
       />
       <Typography my={3}>
         Tokio to tętniąca życiem stolica Japonii, w której nowoczesne drapacze chmur łączą się z
@@ -18,7 +23,12 @@ export const TokioContent = ({ ...props }: TokioContentProps) => {
         🏙️
       </Typography>
       <ImagesSet
-        images={['japonia/tokio-2-1', 'japonia/tokio-2-2', 'japonia/tokio-2-3']}
+        images={[
+          'japonia/tokio-2-1',
+          'japonia/tokio-2-2',
+          'japonia/tokio-2-3',
+          'japonia/tokio-2-4',
+        ]}
       />
       <Typography my={3}>
         Przylecieliśmy do Tokio dwa dni wcześniej, zanim dołączyliśmy do reszty grupy. Jednym z
@@ -28,8 +38,8 @@ export const TokioContent = ({ ...props }: TokioContentProps) => {
         Jeśli chodzi o jedzenie, mimo ogromnej ilości możliwości, głównie zajadaliśmy się ramenami
         xD 🍜 - i zdecydowanie nie żałujemy! Podczas wyjazdu odwiedziliśmy też{' '}
         <DialogRedirectButton miejsce='Kioto'>Kioto</DialogRedirectButton> i{' '}
-        <DialogRedirectButton miejsce='Osaka'>Osakę</DialogRedirectButton>, które były równie fascynujące i
-        zupełnie inne od tętniącego życiem Tokio.
+        <DialogRedirectButton miejsce='Osaka'>Osakę</DialogRedirectButton>, które były równie
+        fascynujące i zupełnie inne od tętniącego życiem Tokio.
         <br /> <br />
         <b>Ciekawostka:</b> W Tokio w godzinach szczytu w metrze można spotkać tzw. „dopychaczy” -
         pracowników stacji, których zadaniem jest delikatne, ale stanowcze dopychanie ludzi do

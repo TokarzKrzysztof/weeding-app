@@ -4,7 +4,7 @@ import { Box, Container, Typography } from 'src/ui-components';
 export const Service = () => {
   return (
     <Subpage>
-      <Container sx={{ textAlign: 'left' }}>
+      <Container>
         <Box sx={{ mt: 2 }}>
           <Typography sx={{ fontWeight: 'bold' }}>Bracia Zięba</Typography>
           <Typography>najlepsi w uchwyceniu najpiękniejszych chwil</Typography>

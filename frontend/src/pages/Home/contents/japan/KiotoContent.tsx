@@ -7,14 +7,14 @@ export type KiotoContentProps = {};
 export const KiotoContent = ({ ...props }: KiotoContentProps) => {
   return (
     <>
-      <ImagesSet images={['japonia/kioto-1-1', 'japonia/kioto-1-2', 'japonia/kioto-1-3']} />
+      <ImagesSet images={['japonia/kioto-1-1', 'japonia/kioto-1-2', 'japonia/kioto-1-3' , 'japonia/kioto-1-4']} />
       <Typography my={3}>
         Kioto to dawna stolica Japonii i jedno z najważniejszych kulturowo miast w kraju. Słynie z
         licznych świątyń, tradycyjnych ogrodów, drewnianych domów oraz dzielnic, w których można
         spotkać gejsze. Miasto zachwyca spokojniejszym klimatem niż Tokio i pozwala poczuć
         prawdziwą, tradycyjną Japonię. ⛩️
       </Typography>
-      <ImagesSet images={['japonia/kioto-2-1', 'japonia/kioto-2-2', 'japonia/kioto-2-3']} />
+      <ImagesSet images={['japonia/kioto-2-1', 'japonia/kioto-2-2', 'japonia/kioto-2-3', 'japonia/kioto-2-4']} />
       <Typography my={3}>
         Kioto odwiedziliśmy podczas naszej podróży po Japonii razem z{' '}
         <DialogRedirectButton miejsce='Tokio'>Tokio</DialogRedirectButton> i{' '}
