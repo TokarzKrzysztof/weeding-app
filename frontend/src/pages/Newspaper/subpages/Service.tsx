@@ -6,27 +6,27 @@ export const Service = () => {
     <Subpage>
       <Container>
         <Box sx={{ mt: 2 }}>
-          <Typography sx={{ fontWeight: 'bold' }}>Bracia Zięba</Typography>
+          <Typography sx={{ fontWeight: 'bold', fontSize: 20 }}>Bracia Zięba 📸</Typography>
           <Typography>najlepsi w uchwyceniu najpiękniejszych chwil</Typography>
         </Box>
         <Box sx={{ mt: 5 }}>
-          <Typography sx={{ fontWeight: 'bold' }}>Krzesavica</Typography>
+          <Typography sx={{ fontWeight: 'bold', fontSize: 20 }}>Krzesavica 🎸</Typography>
           <Typography>gwarancja pełnego parkietu i świetnej zabawy</Typography>
         </Box>
         <Box sx={{ mt: 5 }}>
-          <Typography sx={{ fontWeight: 'bold' }}>Uczesanki</Typography>
+          <Typography sx={{ fontWeight: 'bold', fontSize: 20 }}>Uczesanki 💇‍♀️</Typography>
           <Typography>najpiękniejsze i najtrwalsze fryzury na każdą okazję</Typography>
         </Box>
         <Box sx={{ mt: 5 }}>
-          <Typography sx={{ fontWeight: 'bold' }}>Bogumiła Giemzik</Typography>
+          <Typography sx={{ fontWeight: 'bold', fontSize: 20 }}>Bogumiła Giemzik 🪡</Typography>
           <Typography>wyjątkowe krawiectwo artystyczne</Typography>
         </Box>
         <Box sx={{ mt: 5 }}>
-          <Typography sx={{ fontWeight: 'bold' }}>Tomasz Grochot</Typography>
+          <Typography sx={{ fontWeight: 'bold', fontSize: 20 }}>Tomasz Grochot 💍</Typography>
           <Typography>prawdziwy specjalista od złota</Typography>
         </Box>
         <Box sx={{ mt: 5 }}>
-          <Typography sx={{ fontWeight: 'bold' }}>Adrian Amanowicz</Typography>
+          <Typography sx={{ fontWeight: 'bold', fontSize: 20 }}>Adrian Amanowicz 🪄</Typography>
           <Typography>mistrz iluzji i świetnej atmosfery</Typography>
         </Box>
       </Container>
