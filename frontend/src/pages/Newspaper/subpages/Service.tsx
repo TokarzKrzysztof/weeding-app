@@ -25,6 +25,10 @@ export const Service = () => {
           <Typography sx={{ fontWeight: 'bold' }}>Tomasz Grochot</Typography>
           <Typography>prawdziwy specjalista od złota</Typography>
         </Box>
+        <Box sx={{ mt: 5 }}>
+          <Typography sx={{ fontWeight: 'bold' }}>Adrian Amanowicz</Typography>
+          <Typography>mistrz iluzji i świetnej atmosfery</Typography>
+        </Box>
       </Container>
     </Subpage>
   );
