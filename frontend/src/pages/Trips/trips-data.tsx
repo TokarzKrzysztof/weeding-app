@@ -12,10 +12,6 @@ import { OsakaContent } from 'src/pages/Home/contents/japan/OsakaContent';
 import { TokioContent } from 'src/pages/Home/contents/japan/TokioContent';
 import { BusanContent } from 'src/pages/Home/contents/korea/BusanContent';
 import { SeulContent } from 'src/pages/Home/contents/korea/SeulContent';
-import { KrakowContent } from 'src/pages/Home/contents/poland/KrakowContent';
-import { LodzContent } from 'src/pages/Home/contents/poland/LodzContent';
-import { TorunContent } from 'src/pages/Home/contents/poland/TorunContent';
-import { WroclawContent } from 'src/pages/Home/contents/poland/WroclawContent';
 import { BangkokContent } from 'src/pages/Home/contents/thailand/BangkokContent';
 import { KrabiContent } from 'src/pages/Home/contents/thailand/KrabiContent';
 import { PhiPhiContent } from 'src/pages/Home/contents/thailand/PhiPhiContent';
@@ -53,16 +49,16 @@ export const TRIPS_DATA = [
       { label: 'Osaka', imgSrc: 'miniaturki/osaka.jpg', dialogContent: <OsakaContent /> },
     ],
   },
-  {
-    label: 'Polska',
-    flagSrc: 'flagi/polska.png',
-    places: [
-      { label: 'Toruń', imgSrc: 'miniaturki/torun.jpg', dialogContent: <TorunContent /> },
-      { label: 'Wrocław', imgSrc: 'miniaturki/wroclaw.jpg', dialogContent: <WroclawContent /> },
-      { label: 'Łódź', imgSrc: 'miniaturki/lodz.jpg', dialogContent: <LodzContent /> },
-      { label: 'Kraków', imgSrc: 'miniaturki/krakow.jpg', dialogContent: <KrakowContent /> },
-    ],
-  },
+  // {
+  //   label: 'Polska',
+  //   flagSrc: 'flagi/polska.png',
+  //   places: [
+  //     { label: 'Toruń', imgSrc: 'miniaturki/torun.jpg', dialogContent: <TorunContent /> },
+  //     { label: 'Wrocław', imgSrc: 'miniaturki/wroclaw.jpg', dialogContent: <WroclawContent /> },
+  //     { label: 'Łódź', imgSrc: 'miniaturki/lodz.jpg', dialogContent: <LodzContent /> },
+  //     { label: 'Kraków', imgSrc: 'miniaturki/krakow.jpg', dialogContent: <KrakowContent /> },
+  //   ],
+  // },
   {
     label: 'Korea Płd.',
     flagSrc: 'flagi/korea.png',

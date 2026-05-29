@@ -16,13 +16,21 @@ export const BusanContent = ({ ...props }: BusanContentProps) => {
       </Typography>
       <ImagesSet images={['korea/busan-2-1', 'korea/busan-2-2']} />
       <Typography my={3}>
-        {/* Kioto odwiedziliśmy podczas naszej podróży po Japonii razem z{' '}
-        <DialogRedirectButton miejsce='Tokio'>Tokio</DialogRedirectButton> i{' '}
-        <DialogRedirectButton miejsce='Osaka'>Osaką</DialogRedirectButton>. Miasto od razu zrobiło
-        na nas duże wrażenie swoim spokojem, piękną architekturą i zupełnie inną atmosferą niż
-        nowoczesne Tokio. Spacerując po świątyniach i ogrodach mogliśmy poczuć prawdziwy klimat
-        dawnej Japonii. W Kioto spróbowaliśmy także ramenu ze słynną japońską wołowiną wagyu, a
-        także lokalną tradycyjną kuchnię. */}
+        Busan to kolejny etap mojej podróży po Korei - spędziłam tam 2 noce, po czym wróciłam z
+        powrotem do Seulu. 🌊
+        <br />
+        <br />
+        Podczas pobytu odwiedziłam słynny targ rybny, gdzie można było zobaczyć ogrom świeżych
+        owoców morza i poczuć prawdziwy klimat nadmorskiego miasta. Jednym z największych wrażeń
+        była też wizyta na Haeundae Beach - szerokiej, piaszczystej plaży, która robiła ogromne
+        wrażenie zarówno swoim rozmiarem, jak i widokiem na wysokie, nowoczesne budynki wyrastające
+        tuż przy brzegu.
+        <br />
+        <br />
+        Ten krótki pobyt w Busanie był intensywny, pełen nowych miejsc i wrażeń, ale jednocześnie
+        zostawił ogromny niedosyt. Na końcu tej podróży jeszcze bardziej pojawiło się jedno wspólne
+        marzenie - żeby kiedyś wrócić do Korei już razem i odwiedzić te same miejsca, tym razem
+        przeżywając je we dwoje. 💞
       </Typography>
     </>
   );
